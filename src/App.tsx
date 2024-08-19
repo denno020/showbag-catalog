@@ -78,7 +78,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
       </section>
 
       {location === '/wishlist' && (
-        <Wishlist items={showbags.filter(bagItem => shoppingBagItems.includes(bagItem.slug))} />
+        <Wishlist items={showbags.filter(bagItem => shoppingBagItems.includes(bagItem.slug))} onRemove={handleToggleInShoppingBag} />
       )}
     </>
   )
