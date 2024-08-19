@@ -2,11 +2,18 @@ import { Link } from 'wouter';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Card.module.css';
 
-const Card = (props: {item: ShowbagItem}) => {
-  const {slug, image, title, showbag_price, showbag_value} = props.item;
+export type CardProps = {
+  item: ShowbagItem
+  onToggleInShoppingBag: (slug: ShowbagItem['slug']) => void
+  isInBag: boolean
+}
+
+const Card = (props: CardProps) => {
+  const { item, onToggleInShoppingBag, isInBag } = props;
+  const {slug, image, title, showbag_price, showbag_value} = item;
 
   return (
-    <div className={`w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col hover:grow hover:shadow-lg relative ${classes.card}`}>
+    <div className={`w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:grow hover:shadow-lg relative ${classes.card}`}>
       <Link to={slug} className="flex flex-col gap-3">
         <img alt="Bag preview" className="w-full" src={image.permalink}/>
         <div className="pt-3 flex items-center justify-between">
@@ -23,12 +30,16 @@ const Card = (props: {item: ShowbagItem}) => {
           </div>
         </div>
       </Link>
-      <button tabIndex={-1} className={classes.addToBag}>
-        <svg className="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 24 24">
+      <button className="flex gap-2" onClick={() => onToggleInShoppingBag(slug)}>
+        <svg className="h-6 w-6 fill-current text-gray-500 hover:text-black" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z"/>
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M2 3.5C2 3.22386 2.22386 3 2.5 3H12.5C12.7761 3 13 3.22386 13 3.5V9.5C13 9.77614 12.7761 10 12.5 10H2.5C2.22386 10 2 9.77614 2 9.5V3.5ZM2 10.9146C1.4174 10.7087 1 10.1531 1 9.5V3.5C1 2.67157 1.67157 2 2.5 2H12.5C13.3284 2 14 2.67157 14 3.5V9.5C14 10.1531 13.5826 10.7087 13 10.9146V11.5C13 12.3284 12.3284 13 11.5 13H3.5C2.67157 13 2 12.3284 2 11.5V10.9146ZM12 11V11.5C12 11.7761 11.7761 12 11.5 12H3.5C3.22386 12 3 11.7761 3 11.5V11H12ZM5 6.5C5 6.22386 5.22386 6 5.5 6H7V4.5C7 4.22386 7.22386 4 7.5 4C7.77614 4 8 4.22386 8 4.5V6H9.5C9.77614 6 10 6.22386 10 6.5C10 6.77614 9.77614 7 9.5 7H8V8.5C8 8.77614 7.77614 9 7.5 9C7.22386 9 7 8.77614 7 8.5V7H5.5C5.22386 7 5 6.77614 5 6.5Z"
+            fill="currentColor"
+          />
         </svg>
+        <p>{isInBag ? 'Remove from': 'Add to'} Wish List</p>
       </button>
     </div>
   )

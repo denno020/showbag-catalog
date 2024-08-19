@@ -6,3 +6,14 @@
 .date {
     font-size: 1.5rem;
 }
+
+.bagLink {
+    position: relative;
+}
+
+.shoppingItemsCount {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
