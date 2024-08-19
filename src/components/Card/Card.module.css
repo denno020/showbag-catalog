@@ -1,0 +1,10 @@
+.card {
+    position: relative;
+}
+
+.addToBag {
+    position: absolute;
+    bottom: 15px; /* Attempting to line up with More Details button */
+    right: 0;
+    padding: 15px;
+}
