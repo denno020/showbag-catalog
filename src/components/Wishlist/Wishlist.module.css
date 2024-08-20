@@ -10,3 +10,10 @@
 .wishlist {
     width: 80%;
 }
+
+.closeBtn {
+    --spacing: 10px;
+    position: absolute;
+    top: var(--spacing);
+    left: var(--spacing);
+}
