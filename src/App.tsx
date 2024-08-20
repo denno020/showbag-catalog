@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'wouter';
 import { type ShowbagItem } from './showbags.ts';
 import Catalog from './components/Catalog.tsx';
@@ -8,7 +8,10 @@ import classes from './App.module.css';
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags } = props;
   const [location] = useLocation();
-  const [shoppingBagItems, setShoppingBagItems] = useState<ShowbagItem['slug'][]>([]);
+  const [shoppingBagItems, setShoppingBagItems] = useState<ShowbagItem['slug'][]>(() => {
+    const shoppingBag = localStorage.getItem('shopping-bag');
+    return shoppingBag ? JSON.parse(shoppingBag) : [];
+  });
 
   const handleToggleInShoppingBag = (itemSlug: ShowbagItem['slug']) => {
     setShoppingBagItems((prevItems) => {
@@ -19,6 +22,10 @@ const App = (props: { showbags: ShowbagItem[] }) => {
       return [...prevItems, itemSlug];
     });
   };
+
+  useEffect(() => {
+    localStorage.setItem('shopping-bag', JSON.stringify(shoppingBagItems))
+  }, [shoppingBagItems]);
 
   return (
     <>
