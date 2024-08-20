@@ -22,10 +22,10 @@ const App = (props: { showbags: ShowbagItem[] }) => {
 
   return (
     <>
-      <header className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3 sticky top-0 z-40 bg-white">
+      <header className={classes.header}>
         <img src="/show_logo.svg" alt="" className={classes.image} />
         <div className={classes.date}>August 31st - September 8th</div>
-        <div>
+        <div className={classes.wishlistTriggerContainer}>
           <Link to="/wishlist" className={classes.bagLink}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
