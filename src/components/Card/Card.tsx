@@ -13,7 +13,7 @@ const Card = (props: CardProps) => {
   const {slug, image, title, showbag_price, showbag_value} = item;
 
   return (
-    <div className={`w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:grow hover:shadow-lg relative ${classes.card}`}>
+    <div className={`w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:grow hover:shadow-lg relative ${classes.card}`}>
       <Link to={slug} className="flex flex-col gap-3">
         <img alt="Bag preview" className="w-full" src={image.permalink}/>
         <div className="pt-3 flex items-center justify-between">
