@@ -1,4 +1,7 @@
+import { useRef } from 'react';
+import { useLocation } from "wouter";
 import type {ShowbagItem} from "../../showbags.ts";
+import { useOutsideClick } from '@chakra-ui/react-use-outside-click';
 
 type WishlistProps = {
   items: ShowbagItem[]
@@ -6,11 +9,21 @@ type WishlistProps = {
 }
 
 const Wishlist = (props: WishlistProps) => {
+  const wishlistPanel = useRef(null);
   const {items, onRemove} = props;
+  const [, navigate] = useLocation();
+
+  useOutsideClick({
+    ref: wishlistPanel,
+    // Replace so that pressing the back button in the browser doesn't show the wishlist again
+    // but rather will show the page that the user was on before opening the wishlist
+    handler: () => navigate('/', { replace: true })
+  });
 
   return (
     <div
-      className="fixed top-0 right-0 z-50 w-96 h-full bg-white shadow-lg">
+      ref={wishlistPanel}
+      className="fixed top-0 right-0 z-50 h-full bg-white shadow-lg">
       <div className="px-6 py-4">
         <h2 className="text-lg font-semibold">Show Bags Wish List</h2>
         <div className="flex flex-col gap-4">
