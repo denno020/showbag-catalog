@@ -1,10 +1,13 @@
 import { useCallback, useRef } from 'react';
 import { useOutsideClick } from '@chakra-ui/react-use-outside-click';
 import classnames from 'classnames';
+import toast from 'react-hot-toast';
 import WishlistItem from './WishlistItem.tsx';
 import { useEscapeKey } from '../../hooks/useEscapeKey.ts';
+import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './Wishlist.module.css';
+import { updateQueryStringWithArray } from '../../utils/updateQueryStringWithArray.ts';
 
 type WishlistProps = {
   items: ShowbagItem[];
@@ -13,13 +16,28 @@ type WishlistProps = {
 
 const Wishlist = (props: WishlistProps) => {
   const wishlistPanel = useRef(null);
+  const successToast = useRef(null);
   const { items, onRemove } = props;
+  const { copyTextToClipboard } = useClipboard();
 
   const closeWishlist = useCallback(() => {
     history.back();
   }, []);
 
-  const handlePrepareShareURL = () => {};
+  const handlePrepareShareURL = async () => {
+    updateQueryStringWithArray('unnamed', items);
+
+    if (navigator.canShare && navigator.canShare()) {
+      await navigator.share({
+        title: 'My Show Bag Wishlist for Royal Adelaide Show',
+        url: location.href
+      });
+      return;
+    }
+
+    copyTextToClipboard(location.href);
+    toast.success("URL has been copied to your clipboard!")
+  };
 
   useEscapeKey(closeWishlist);
 

@@ -4,6 +4,7 @@ import { type ShowbagItem } from './showbags.ts';
 import Catalog from './components/Catalog.tsx';
 import Wishlist from './components/Wishlist';
 import classes from './App.module.css';
+import { Toaster } from 'react-hot-toast';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags } = props;
@@ -29,6 +30,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
 
   return (
     <>
+      <Toaster />
       <header className={classes.header}>
         <img src="/show_logo.svg" alt="" className={classes.image} />
         <div className={classes.date}>August 31st - September 8th</div>
