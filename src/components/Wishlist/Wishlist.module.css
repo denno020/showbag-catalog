@@ -11,9 +11,26 @@
     width: 80%;
 }
 
-.closeBtn {
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.btn {
     --spacing: 10px;
-    position: absolute;
+    /* position: absolute; */
     top: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeBtn {
     right: var(--spacing);
+}
+
+.shareBtn {
+    left: var(--spacing);
 }

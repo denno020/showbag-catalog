@@ -44,12 +44,13 @@ const App = (props: { showbags: ShowbagItem[] }) => {
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
             </svg>
             <div className={classes.shoppingItemsCount}>{shoppingBagItems.length}</div>
+            <p>Wishlist</p>
           </Link>
         </div>
       </header>
       <section className="bg-white py-8">
-        <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-          <nav id="store" className="w-full z-30 top-0 px-6 py-1">
+        <div className="container mx-auto flex items-center flex-wrap">
+          <nav id="store" className="w-full top-0 px-6 py-1">
             <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
               <p className="uppercase tracking-wide font-bold text-gray-800 text-xl">Showbags</p>
 
