@@ -1,5 +1,4 @@
 import { useCallback, useRef } from 'react';
-import { useLocation } from "wouter";
 import { useOutsideClick } from '@chakra-ui/react-use-outside-click';
 import WishlistItem from './WishlistItem.tsx'
 import { useEscapeKey } from '../../hooks/useEscapeKey.ts';
@@ -13,12 +12,11 @@ type WishlistProps = {
 
 const Wishlist = (props: WishlistProps) => {
   const wishlistPanel = useRef(null);
-  const {items, onRemove} = props;
-  const [, navigate] = useLocation();
+  const { items, onRemove } = props;
 
   const closeWishlist = useCallback(() => {
-    navigate('/', { replace: true });
-  }, [navigate])
+    history.back();
+  }, []);
 
   useEscapeKey(closeWishlist)
 
