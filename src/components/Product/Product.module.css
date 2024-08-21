@@ -27,6 +27,12 @@
     grid-template-columns: auto auto;
 }
 
+@media (max-width: 1100px) {
+    .product {
+        grid-template-columns: 1fr;
+    }
+}
+
 .imageContainer {
     position: relative;
 }
