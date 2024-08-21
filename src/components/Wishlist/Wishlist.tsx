@@ -1,9 +1,7 @@
-import { useCallback, useRef } from 'react';
-import { useOutsideClick } from '@chakra-ui/react-use-outside-click';
 import classnames from 'classnames';
 import toast from 'react-hot-toast';
 import WishlistItem from './WishlistItem.tsx';
-import { useEscapeKey } from '../../hooks/useEscapeKey.ts';
+import { useClose } from '../../hooks/useClose.ts';
 import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './Wishlist.module.css';
@@ -15,14 +13,10 @@ type WishlistProps = {
 };
 
 const Wishlist = (props: WishlistProps) => {
-  const wishlistPanel = useRef(null);
-  const successToast = useRef(null);
   const { items, onRemove } = props;
   const { copyTextToClipboard } = useClipboard();
 
-  const closeWishlist = useCallback(() => {
-    history.back();
-  }, []);
+  const { ref, close } = useClose();
 
   const handlePrepareShareURL = async () => {
     updateQueryStringWithArray('unnamed', items);
@@ -39,18 +33,9 @@ const Wishlist = (props: WishlistProps) => {
     toast.success("URL has been copied to your clipboard!")
   };
 
-  useEscapeKey(closeWishlist);
-
-  useOutsideClick({
-    ref: wishlistPanel,
-    // replace:true so that pressing the back button in the browser doesn't show the wishlist again
-    // but rather will show the page that the user was on before opening the wishlist
-    handler: closeWishlist
-  });
-
   return (
     <div className={`z-50 ${classes.overlay}`}>
-      <aside ref={wishlistPanel} className={`fixed top-0 right-0 z-50 h-full bg-white shadow-lg ${classes.wishlist}`}>
+      <aside ref={ref} className={`fixed top-0 right-0 z-50 h-full bg-white shadow-lg ${classes.wishlist}`}>
         <header className={classes.header}>
           <button onClick={handlePrepareShareURL} className={classnames(classes.btn, classes.shareBtn)}>
             <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="currentColor">
@@ -60,7 +45,7 @@ const Wishlist = (props: WishlistProps) => {
             <span className="text-sm">Share</span>
           </button>
           <h2 className="text-xl font-semibold text-center">Show Bags Wish List</h2>
-          <button onClick={closeWishlist} className={classnames(classes.btn, classes.closeBtn)}>
+          <button onClick={close} className={classnames(classes.btn, classes.closeBtn)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
