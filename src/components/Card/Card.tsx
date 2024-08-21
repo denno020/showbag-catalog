@@ -3,35 +3,43 @@ import type { ShowbagItem } from '../../showbags';
 import classes from './Card.module.css';
 
 export type CardProps = {
-  item: ShowbagItem
-  onToggleInShoppingBag: (slug: ShowbagItem['slug']) => void
-  isInBag: boolean
-}
+  item: ShowbagItem;
+  onToggleInShoppingBag: (slug: ShowbagItem['slug']) => void;
+  isInBag: boolean;
+};
 
 const Card = (props: CardProps) => {
   const { item, onToggleInShoppingBag, isInBag } = props;
-  const {slug, image, title, showbag_price, showbag_value} = item;
+  const { slug, image, title, showbag_price, showbag_value } = item;
 
   return (
-    <div className={`w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:grow hover:shadow-lg relative ${classes.card}`}>
+    <div
+      className={`w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:grow hover:shadow-lg relative ${classes.card}`}
+    >
       <Link to={slug} className="flex flex-col gap-3">
-        <img alt="Bag preview" className="w-full" src={image.permalink}/>
+        <img alt="Bag preview" className="w-full" src={image.permalink} />
         <div className="pt-3 flex items-center justify-between">
           <p className="text-xl">{title}</p>
         </div>
         <div className="flex items-baseline gap-2">
           <p className="pt-1 text-gray-900 text-3xl">${showbag_price}</p>
-          <p className="pt-1 text-gray-900"><em>${showbag_value} value</em></p>
+          <p className="pt-1 text-gray-900">
+            <em>${showbag_value} value</em>
+          </p>
         </div>
         <div className="flex justify-center">
-          <div
-            className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none">More
-            Info
+          <div className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none">
+            More Info
           </div>
         </div>
       </Link>
       <button className="flex gap-2" onClick={() => onToggleInShoppingBag(slug)}>
-        <svg className="h-6 w-6 fill-current text-gray-500 hover:text-black" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="h-6 w-6 fill-current text-gray-500 hover:text-black"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -39,10 +47,10 @@ const Card = (props: CardProps) => {
             fill="currentColor"
           />
         </svg>
-        <p>{isInBag ? 'Remove from': 'Add to'} Wish List</p>
+        <p>{isInBag ? 'Remove from' : 'Add to'} Wish List</p>
       </button>
     </div>
-  )
-}
+  );
+};
 
 export default Card;
