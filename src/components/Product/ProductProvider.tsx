@@ -4,7 +4,7 @@ import Product from './Product';
 
 type ProductProviderProps = {
   items: ShowbagItem[];
-  shoppingBagItems: ShowbagItem['slug'];
+  shoppingBagItems: ShowbagItem['slug'][];
   onToggleInShoppingBag: (slug: ShowbagItem['slug']) => void;
 };
 
