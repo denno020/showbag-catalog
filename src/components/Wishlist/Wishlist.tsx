@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import toast from 'react-hot-toast';
+import FocusTrap from 'focus-trap-react';
 import WishlistItem from './WishlistItem.tsx';
 import { useClose } from '../../hooks/useClose.ts';
 import { useClipboard } from '../../hooks/useClipboard.js';
@@ -35,6 +36,7 @@ const Wishlist = (props: WishlistProps) => {
 
   return (
     <div className={`z-50 ${classes.overlay}`}>
+      <FocusTrap>
       <aside ref={ref} className={`fixed top-0 right-0 z-50 h-full bg-white shadow-lg ${classes.wishlist}`}>
         <header className={classes.header}>
           <button onClick={handlePrepareShareURL} className={classnames(classes.btn, classes.shareBtn)}>
@@ -76,6 +78,7 @@ const Wishlist = (props: WishlistProps) => {
           </div>
         </div>
       </aside>
+      </FocusTrap>
     </div>
   );
 };
