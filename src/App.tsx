@@ -5,6 +5,7 @@ import Catalog from './components/Catalog.tsx';
 import Wishlist from './components/Wishlist';
 import classes from './App.module.css';
 import { Toaster } from 'react-hot-toast';
+import ProductProvider from './components/Product/ProductProvider.tsx';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags } = props;
@@ -25,7 +26,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem('shopping-bag', JSON.stringify(shoppingBagItems))
+    localStorage.setItem('shopping-bag', JSON.stringify(shoppingBagItems));
   }, [shoppingBagItems]);
 
   return (
@@ -36,13 +37,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
         <div className={classes.date}>August 31st - September 8th</div>
         <div className={classes.wishlistTriggerContainer}>
           <Link to="/wishlist" className={classes.bagLink}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="34"
-              height="35"
-              fill="currentColor"
-              viewBox="0 0 16 16"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" fill="currentColor" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
             </svg>
             <div className={classes.shoppingItemsCount}>{shoppingBagItems.length}</div>
@@ -84,11 +79,18 @@ const App = (props: { showbags: ShowbagItem[] }) => {
             </div>
           </nav>
 
-          <Catalog
-            items={showbags}
-            onToggleInShoppingBag={handleToggleInShoppingBag}
-            shoppingBagItems={shoppingBagItems}
-          />
+          <div>
+            {!['/', '/wishlist'].includes(location) && (
+              <ProductProvider items={showbags} onToggleInShoppingBag={handleToggleInShoppingBag} shoppingBagItems={shoppingBagItems}/>
+            )}
+            <div className="flex items-center flex-wrap">
+              <Catalog
+                items={showbags}
+                onToggleInShoppingBag={handleToggleInShoppingBag}
+                shoppingBagItems={shoppingBagItems}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
