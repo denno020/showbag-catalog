@@ -141,7 +141,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '16',
-    'showbag_value': '17.3',
+    'showbag_value': '17.30',
     'slug': 'aero',
     'featured': false,
     'items': [
@@ -236,7 +236,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '7',
-    'showbag_value': '7.8',
+    'showbag_value': '7.80',
     'slug': 'aero-7-range',
     'featured': false,
     'items': [
@@ -1354,7 +1354,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '6',
-    'showbag_value': '8.7',
+    'showbag_value': '8.70',
     'slug': 'after-shocks-showbag',
     'featured': false,
     'items': [
@@ -1610,7 +1610,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '25',
-    'showbag_value': '38.4',
+    'showbag_value': '38.40',
     'slug': 'all-american-showbag',
     'featured': false,
     'items': [
@@ -1723,7 +1723,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '16',
-    'showbag_value': '19.7',
+    'showbag_value': '19.70',
     'slug': 'allens-choc-classics',
     'featured': false,
     'items': [
@@ -2123,7 +2123,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '20',
-    'showbag_value': '25.2',
+    'showbag_value': '25.20',
     'slug': 'american-candy-showbag',
     'featured': false,
     'items': [
@@ -2260,7 +2260,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '30',
-    'showbag_value': '67.5',
+    'showbag_value': '67.50',
     'slug': 'army-action-showbag',
     'featured': false,
     'items': [
@@ -2343,7 +2343,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '28',
-    'showbag_value': '38.6',
+    'showbag_value': '38.60',
     'slug': 'army-jnr-bag',
     'featured': false,
     'items': [
@@ -2581,7 +2581,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '32',
-    'showbag_value': '90.5',
+    'showbag_value': '90.50',
     'slug': 'assassins-creed-showbag',
     'featured': false,
     'items': [
@@ -2704,7 +2704,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '30',
-    'showbag_value': '47.6',
+    'showbag_value': '47.60',
     'slug': 'aussie-soccer-bag',
     'featured': false,
     'items': [
@@ -2805,7 +2805,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '28',
-    'showbag_value': '135.6',
+    'showbag_value': '135.60',
     'slug': 'australis-cosmetics',
     'featured': false,
     'items': [
@@ -3144,7 +3144,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '15',
-    'showbag_value': '28.7',
+    'showbag_value': '28.70',
     'slug': 'bag-of-bubbles',
     'featured': false,
     'items': [
@@ -3235,7 +3235,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '32',
-    'showbag_value': '81.5',
+    'showbag_value': '81.50',
     'slug': 'bananya-showbag',
     'featured': false,
     'items': [
@@ -3494,7 +3494,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '32',
-    'showbag_value': '78.6',
+    'showbag_value': '78.60',
     'slug': 'barbie-fantasy-showbag',
     'featured': false,
     'items': [
@@ -3592,7 +3592,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '30',
-    'showbag_value': '47.7',
+    'showbag_value': '47.70',
     'slug': 'batman-bag',
     'featured': false,
     'items': [
@@ -3837,7 +3837,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '32',
-    'showbag_value': '113.4',
+    'showbag_value': '113.40',
     'slug': 'bbz-showbag',
     'featured': false,
     'items': [
@@ -4638,7 +4638,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '20',
-    'showbag_value': '34.4',
+    'showbag_value': '34.40',
     'slug': 'bertie-beetle-bonanza',
     'featured': false,
     'items': [
@@ -5363,7 +5363,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '20',
-    'showbag_value': '37.5',
+    'showbag_value': '37.50',
     'slug': 'big-kit-kat',
     'featured': false,
     'items': [
@@ -5440,7 +5440,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '20',
-    'showbag_value': '25.1',
+    'showbag_value': '25.10',
     'slug': 'big-milkybar',
     'featured': false,
     'items': [
@@ -5529,7 +5529,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '25',
-    'showbag_value': '37.7',
+    'showbag_value': '37.70',
     'slug': 'big-nestle-family-deal',
     'featured': false,
     'items': [
@@ -5705,7 +5705,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '32',
-    'showbag_value': '73.6',
+    'showbag_value': '73.60',
     'slug': 'bingo-showbag',
     'featured': false,
     'items': [
@@ -5924,7 +5924,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '32',
-    'showbag_value': '72.6',
+    'showbag_value': '72.60',
     'slug': 'bluey-showbag-b',
     'featured': false,
     'items': [
@@ -6170,7 +6170,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '10',
-    'showbag_value': '16.1',
+    'showbag_value': '16.10',
     'slug': 'brainlicker',
     'featured': false,
     'items': [
@@ -6886,7 +6886,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '26',
-    'showbag_value': '65.5',
+    'showbag_value': '65.50',
     'slug': 'bys-mini-me',
     'featured': false,
     'items': [
@@ -7195,7 +7195,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '6.7',
+    'showbag_value': '6.70',
     'slug': 'cadbury-caramello-koala',
     'featured': false,
     'items': [
@@ -7359,7 +7359,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '20',
-    'showbag_value': '22.6',
+    'showbag_value': '22.60',
     'slug': 'cadbury-caramilk-megabag',
     'featured': false,
     'items': [
@@ -7456,7 +7456,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '10',
-    'showbag_value': '12.6',
+    'showbag_value': '12.60',
     'slug': 'cadbury-caramilk-superbag',
     'featured': false,
     'items': [
@@ -7535,7 +7535,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '6.5',
+    'showbag_value': '6.50',
     'slug': 'cadbury-cherry-ripe',
     'featured': false,
     'items': [
@@ -7687,7 +7687,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '6.5',
+    'showbag_value': '6.50',
     'slug': 'cadbury-crunchie',
     'featured': false,
     'items': [
@@ -7851,7 +7851,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '6.5',
+    'showbag_value': '6.50',
     'slug': 'cadbury-curly-wurly',
     'featured': false,
     'items': [
@@ -8003,7 +8003,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '7.5',
+    'showbag_value': '7.50',
     'slug': 'cadbury-dairy-milk',
     'featured': false,
     'items': [
@@ -8531,7 +8531,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '6.2',
+    'showbag_value': '6.20',
     'slug': 'cadbury-freddo',
     'featured': false,
     'items': [
@@ -8713,7 +8713,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:20'
     },
     'showbag_price': '5',
-    'showbag_value': '5.5',
+    'showbag_value': '5.50',
     'slug': 'cadbury-furry-friends',
     'featured': false,
     'items': [
@@ -8786,7 +8786,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '25',
-    'showbag_value': '26.5',
+    'showbag_value': '26.50',
     'slug': 'cadbury-indulgence',
     'featured': false,
     'items': [
@@ -8974,7 +8974,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '11.5',
+    'showbag_value': '11.50',
     'slug': 'cadbury-picnic-showbag',
     'featured': false,
     'items': [
@@ -9047,7 +9047,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '5',
-    'showbag_value': '5.6',
+    'showbag_value': '5.60',
     'slug': 'cadbury-turkish-delight',
     'featured': false,
     'items': [
@@ -9120,7 +9120,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '12.5',
+    'showbag_value': '12.50',
     'slug': 'cadbury-twirl',
     'featured': false,
     'items': [
@@ -9300,8 +9300,8 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '12.5',
-    'showbag_value': '35.2',
+    'showbag_price': '12.50',
+    'showbag_value': '35.20',
     'slug': 'candy-craze-super-bag',
     'featured': false,
     'items': [
@@ -9541,7 +9541,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '7.1',
+    'showbag_value': '7.10',
     'slug': 'captain-candy',
     'featured': false,
     'items': [
@@ -10023,7 +10023,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '38.9',
+    'showbag_value': '38.90',
     'slug': 'charlesworths-insatiable-showbag',
     'featured': false,
     'items': [
@@ -10538,7 +10538,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '16',
-    'showbag_value': '16.4',
+    'showbag_value': '16.40',
     'slug': 'chokito',
     'featured': false,
     'items': [
@@ -10633,7 +10633,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '11.5',
+    'showbag_value': '11.50',
     'slug': 'chupa-chups-megabag-showbag',
     'featured': false,
     'items': [
@@ -11293,7 +11293,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '25',
-    'showbag_value': '31.5',
+    'showbag_value': '31.50',
     'slug': 'darrell-lea-favourites-showbag',
     'featured': false,
     'items': [
@@ -11913,7 +11913,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '76.6',
+    'showbag_value': '76.60',
     'slug': 'dinosaur-rules',
     'featured': false,
     'items': [
@@ -12006,7 +12006,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '47.7',
+    'showbag_value': '47.70',
     'slug': 'disney-wish-bag',
     'featured': false,
     'items': [
@@ -12430,7 +12430,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '16.6',
+    'showbag_value': '16.60',
     'slug': 'dynamite-bubble-gum-showbag',
     'featured': false,
     'items': [
@@ -12758,7 +12758,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '15',
-    'showbag_value': '37.6',
+    'showbag_value': '37.60',
     'slug': 'encanto-bag',
     'featured': false,
     'items': [
@@ -12875,7 +12875,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '20',
-    'showbag_value': '46.5',
+    'showbag_value': '46.50',
     'slug': 'fairy-girls-showbag',
     'featured': false,
     'items': [
@@ -13063,7 +13063,7 @@ export const showbags = [
       'last_modified': '2024-08-15 15:12:29'
     },
     'showbag_price': '32',
-    'showbag_value': '84.5',
+    'showbag_value': '84.50',
     'slug': 'fast-furious-showbag',
     'featured': false,
     'items': [
@@ -13181,7 +13181,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '22',
-    'showbag_value': '24.5',
+    'showbag_value': '24.50',
     'slug': 'ferrero-rocher',
     'featured': false,
     'items': [
@@ -13272,7 +13272,7 @@ export const showbags = [
       'last_modified': '2024-08-15 15:12:29'
     },
     'showbag_price': '6',
-    'showbag_value': '9.3',
+    'showbag_value': '9.30',
     'slug': 'fizzer-showbag',
     'featured': false,
     'items': [
@@ -13499,7 +13499,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '72.6',
+    'showbag_value': '72.60',
     'slug': 'friends-showbag',
     'featured': false,
     'items': [
@@ -13636,7 +13636,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '62.3',
+    'showbag_value': '62.30',
     'slug': 'frozen-2-cosmetic-bag',
     'featured': false,
     'items': [
@@ -13943,7 +13943,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '15',
-    'showbag_value': '18.5',
+    'showbag_value': '18.50',
     'slug': 'fyna-licorice-regular-bag',
     'featured': false,
     'items': [
@@ -14028,7 +14028,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '20',
-    'showbag_value': '24.5',
+    'showbag_value': '24.50',
     'slug': 'fyna-mega-licorice-bag',
     'featured': false,
     'items': [
@@ -14324,7 +14324,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '20',
-    'showbag_value': '62.6',
+    'showbag_value': '62.60',
     'slug': 'game-of-thrones-showbag',
     'featured': false,
     'items': [
@@ -14434,7 +14434,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '16.9',
+    'showbag_value': '16.90',
     'slug': 'ghost-drops-showbags',
     'featured': false,
     'items': [
@@ -14606,7 +14606,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '17.5',
+    'showbag_value': '17.50',
     'slug': 'giant-candy-showbag',
     'featured': false,
     'items': [
@@ -14965,7 +14965,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '75.5',
+    'showbag_value': '75.50',
     'slug': 'gudetama-showbag-b',
     'featured': false,
     'items': [
@@ -15133,7 +15133,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '91.5',
+    'showbag_value': '91.50',
     'slug': 'harry-potter-classic-showbag',
     'featured': false,
     'items': [
@@ -15470,7 +15470,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '66.5',
+    'showbag_value': '66.50',
     'slug': 'hot-wheels-monster-truck-showbag',
     'featured': false,
     'items': [
@@ -15840,8 +15840,8 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '7.5',
-    'showbag_value': '8.5',
+    'showbag_price': '7.50',
+    'showbag_value': '8.50',
     'slug': 'hubba-bubba-showbag',
     'featured': false,
     'items': [
@@ -16288,7 +16288,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '14.3',
+    'showbag_value': '14.30',
     'slug': 'jelly-belly-10',
     'featured': false,
     'items': [
@@ -16520,7 +16520,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '25',
-    'showbag_value': '36.9',
+    'showbag_value': '36.90',
     'slug': 'jumbo-fizz-showbag',
     'featured': false,
     'items': [
@@ -17209,7 +17209,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '28',
-    'showbag_value': '38.8',
+    'showbag_value': '38.80',
     'slug': 'karate-ninja-bag',
     'featured': false,
     'items': [
@@ -17302,7 +17302,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '18',
-    'showbag_value': '19.3',
+    'showbag_value': '19.30',
     'slug': 'kinder-bueno',
     'featured': false,
     'items': [
@@ -17712,7 +17712,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '7',
-    'showbag_value': '13.5',
+    'showbag_value': '13.50',
     'slug': 'kit-kat-7-range',
     'featured': false,
     'items': [
@@ -18008,7 +18008,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '67.6',
+    'showbag_value': '67.60',
     'slug': 'lol-surprise-showbag',
     'featured': false,
     'items': [
@@ -18396,8 +18396,8 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '38.5',
-    'showbag_value': '57.5',
+    'showbag_price': '38.50',
+    'showbag_value': '57.50',
     'slug': 'lindt-box-of-50-balls',
     'featured': false,
     'items': [
@@ -18470,7 +18470,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '165',
-    'showbag_value': '235.5',
+    'showbag_value': '235.50',
     'slug': 'lindt-box-of-blocks',
     'featured': false,
     'items': [
@@ -18673,7 +18673,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '35',
-    'showbag_value': '55.6',
+    'showbag_value': '55.60',
     'slug': 'little-mermaid-dressup-bag',
     'featured': false,
     'items': [
@@ -18792,7 +18792,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '20',
-    'showbag_value': '75.5',
+    'showbag_value': '75.50',
     'slug': 'llama-showbag',
     'featured': false,
     'items': [
@@ -18930,7 +18930,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '5',
-    'showbag_value': '14.5',
+    'showbag_value': '14.50',
     'slug': 'lollipops-showbag',
     'featured': false,
     'items': [
@@ -19009,7 +19009,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '47.7',
+    'showbag_value': '47.70',
     'slug': 'looney-tunes-bag',
     'featured': false,
     'items': [
@@ -19124,7 +19124,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '125.4',
+    'showbag_value': '125.40',
     'slug': 'love-chella-showbag',
     'featured': false,
     'items': [
@@ -19525,7 +19525,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '12.6',
+    'showbag_value': '12.60',
     'slug': 'mms-super-bag',
     'featured': false,
     'items': [
@@ -20132,7 +20132,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '15',
-    'showbag_value': '19.5',
+    'showbag_value': '19.50',
     'slug': 'mars-sharing-bag',
     'featured': false,
     'items': [
@@ -20318,7 +20318,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '75.6',
+    'showbag_value': '75.60',
     'slug': 'may-gibbs-showbag',
     'featured': false,
     'items': [
@@ -20424,7 +20424,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '12.5',
+    'showbag_value': '12.50',
     'slug': 'mega-fizz',
     'featured': false,
     'items': [
@@ -20828,7 +20828,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '15',
-    'showbag_value': '22.5',
+    'showbag_value': '22.50',
     'slug': 'melbas-kids-bag',
     'featured': false,
     'items': [
@@ -20911,7 +20911,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '34.5',
+    'showbag_value': '34.50',
     'slug': 'melbas-mums-bag',
     'featured': false,
     'items': [
@@ -21004,7 +21004,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '28',
-    'showbag_value': '497.8',
+    'showbag_value': '497.80',
     'slug': 'mens-essential',
     'featured': false,
     'items': [
@@ -21396,7 +21396,7 @@ export const showbags = [
       'last_modified': '2024-08-16 15:01:38'
     },
     'showbag_price': '6',
-    'showbag_value': '8.5',
+    'showbag_value': '8.50',
     'slug': 'mentos-showbag',
     'featured': false,
     'items': [
@@ -22374,7 +22374,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '94.4',
+    'showbag_value': '94.40',
     'slug': 'mermaids-showbag',
     'featured': false,
     'items': [
@@ -22607,7 +22607,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '72.6',
+    'showbag_value': '72.60',
     'slug': 'miffy-showbag',
     'featured': false,
     'items': [
@@ -22703,7 +22703,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '7',
-    'showbag_value': '8.6',
+    'showbag_value': '8.60',
     'slug': 'milkybar-7-range',
     'featured': false,
     'items': [
@@ -22861,7 +22861,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '14.4',
+    'showbag_value': '14.40',
     'slug': 'milkyway-super-bag',
     'featured': false,
     'items': [
@@ -23134,7 +23134,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '35',
-    'showbag_value': '47.7',
+    'showbag_value': '47.70',
     'slug': 'minecraft-dressup-bag-steve',
     'featured': false,
     'items': [
@@ -23221,7 +23221,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '35',
-    'showbag_value': '67.4',
+    'showbag_value': '67.40',
     'slug': 'minnie-mouse-bag',
     'featured': false,
     'items': [
@@ -23329,8 +23329,8 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '16.6',
-    'showbag_value': '16.6',
+    'showbag_price': '16.60',
+    'showbag_value': '16.60',
     'slug': 'minties',
     'featured': false,
     'items': [
@@ -23622,7 +23622,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '50',
-    'showbag_value': '84.5',
+    'showbag_value': '84.50',
     'slug': 'morish-jumbo-showbag',
     'featured': false,
     'items': [
@@ -23729,7 +23729,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '28',
-    'showbag_value': '48.5',
+    'showbag_value': '48.50',
     'slug': 'morish-mum-and-dads-showbag',
     'featured': false,
     'items': [
@@ -23830,7 +23830,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '42',
-    'showbag_value': '75.5',
+    'showbag_value': '75.50',
     'slug': 'morish-nuts-and-nougat-showbag',
     'featured': false,
     'items': [
@@ -23943,7 +23943,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '36',
-    'showbag_value': '64.5',
+    'showbag_value': '64.50',
     'slug': 'morish-premium-showbag',
     'featured': false,
     'items': [
@@ -24137,7 +24137,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '35',
-    'showbag_value': '49.7',
+    'showbag_value': '49.70',
     'slug': 'my-little-pony-bag',
     'featured': false,
     'items': [
@@ -25641,7 +25641,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '46.9',
+    'showbag_value': '46.90',
     'slug': 'ninja-showbag',
     'featured': false,
     'items': [
@@ -25690,8 +25690,8 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '12.5',
-    'showbag_value': '15.1',
+    'showbag_price': '12.50',
+    'showbag_value': '15.10',
     'slug': 'nobbys-nuts-bag',
     'featured': false,
     'items': [
@@ -25786,7 +25786,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '95.5',
+    'showbag_value': '95.50',
     'slug': 'nobodys-bae-showbag',
     'featured': false,
     'items': [
@@ -27587,7 +27587,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '68.6',
+    'showbag_value': '68.60',
     'slug': 'nrl-st-george-dragons-showbag',
     'featured': false,
     'items': [
@@ -27712,7 +27712,7 @@ export const showbags = [
       'last_modified': '2024-08-16 15:06:59'
     },
     'showbag_price': '30',
-    'showbag_value': '65.5',
+    'showbag_value': '65.50',
     'slug': 'nrl-state-of-origin-nsw-showbag',
     'featured': false,
     'items': [
@@ -27849,7 +27849,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '65.5',
+    'showbag_value': '65.50',
     'slug': 'nrl-state-of-origin-qld-showbag',
     'featured': false,
     'items': [
@@ -28295,7 +28295,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '140.7',
+    'showbag_value': '140.70',
     'slug': 'nude-by-nature-skincare',
     'featured': false,
     'items': [
@@ -28591,8 +28591,8 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '12.5',
-    'showbag_value': '14.6',
+    'showbag_price': '12.50',
+    'showbag_value': '14.60',
     'slug': 'oreo-showbag',
     'featured': false,
     'items': [
@@ -28705,7 +28705,7 @@ export const showbags = [
       'last_modified': '2024-08-16 15:00:48'
     },
     'showbag_price': '32',
-    'showbag_value': '63.3',
+    'showbag_value': '63.30',
     'slug': 'original-idiot-showbag',
     'featured': false,
     'items': [
@@ -28864,7 +28864,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '71.6',
+    'showbag_value': '71.60',
     'slug': 'pac-man-showbag',
     'featured': false,
     'items': [
@@ -28970,7 +28970,7 @@ export const showbags = [
       'last_modified': '2024-08-16 15:09:12'
     },
     'showbag_price': '32',
-    'showbag_value': '75.6',
+    'showbag_value': '75.60',
     'slug': 'paw-patrol-showbag1',
     'featured': false,
     'items': [
@@ -29218,7 +29218,7 @@ export const showbags = [
       'last_modified': '2024-08-15 15:12:29'
     },
     'showbag_price': '32',
-    'showbag_value': '70.6',
+    'showbag_value': '70.60',
     'slug': 'peppa-pig-showbag',
     'featured': false,
     'items': [
@@ -29337,7 +29337,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '35',
-    'showbag_value': '64.9',
+    'showbag_value': '64.90',
     'slug': 'perfume-collection',
     'featured': false,
     'items': [
@@ -29817,7 +29817,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '15.4',
+    'showbag_value': '15.40',
     'slug': 'pocky-showbag',
     'featured': false,
     'items': [
@@ -30051,7 +30051,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '63.6',
+    'showbag_value': '63.60',
     'slug': 'pokemon-junior-showbag',
     'featured': false,
     'items': [
@@ -30192,7 +30192,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '16',
-    'showbag_value': '17.9',
+    'showbag_value': '17.90',
     'slug': 'polly-waffle',
     'featured': false,
     'items': [
@@ -30620,7 +30620,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '72.5',
+    'showbag_value': '72.50',
     'slug': 'rainbocorns-showbag-23',
     'featured': false,
     'items': [
@@ -31033,7 +31033,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '7.1',
+    'showbag_value': '7.10',
     'slug': 'red-rock-deli-bag',
     'featured': false,
     'items': [
@@ -31130,7 +31130,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '86.5',
+    'showbag_value': '86.50',
     'slug': 'rick-and-morty-showbag',
     'featured': false,
     'items': [
@@ -31454,7 +31454,7 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '16.5',
+    'showbag_price': '16.50',
     'showbag_value': '20',
     'slug': 'rip-snorter-super-brain-blasters-bag',
     'featured': false,
@@ -31941,7 +31941,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '28',
-    'showbag_value': '35.6',
+    'showbag_value': '35.60',
     'slug': 'swat-jnr-bag',
     'featured': false,
     'items': [
@@ -32258,7 +32258,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '28',
-    'showbag_value': '47.7',
+    'showbag_value': '47.70',
     'slug': 'scooby-doo-bag',
     'featured': false,
     'items': [
@@ -32579,7 +32579,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '69.6',
+    'showbag_value': '69.60',
     'slug': 'sesame-street-showbag',
     'featured': false,
     'items': [
@@ -32682,7 +32682,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '11.5',
+    'showbag_value': '11.50',
     'slug': 'sherbert-pops-fizz',
     'featured': false,
     'items': [
@@ -32795,7 +32795,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '7.2',
+    'showbag_value': '7.20',
     'slug': 'skittles-bag',
     'featured': false,
     'items': [
@@ -32855,7 +32855,7 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '16.5',
+    'showbag_price': '16.50',
     'showbag_value': '27.27',
     'slug': 'skittles-family-sharing-bag',
     'featured': false,
@@ -32932,7 +32932,7 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '12.5',
+    'showbag_price': '12.50',
     'showbag_value': '14.98',
     'slug': 'skittles-super-bag',
     'featured': false,
@@ -33010,7 +33010,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '20',
-    'showbag_value': '57.5',
+    'showbag_value': '57.50',
     'slug': 'slime-super-showbag',
     'featured': false,
     'items': [
@@ -33221,7 +33221,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '7',
-    'showbag_value': '8.6',
+    'showbag_value': '8.60',
     'slug': 'smarties-7-range',
     'featured': false,
     'items': [
@@ -33294,7 +33294,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '7.1',
+    'showbag_value': '7.10',
     'slug': 'smiths-regular-bag',
     'featured': false,
     'items': [
@@ -34350,7 +34350,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '72.6',
+    'showbag_value': '72.60',
     'slug': 'sonic-showbag-24',
     'featured': false,
     'items': [
@@ -34499,7 +34499,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '25',
-    'showbag_value': '52.2',
+    'showbag_value': '52.20',
     'slug': 'sour-blast-showbag',
     'featured': false,
     'items': [
@@ -34661,7 +34661,7 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '12.5',
+    'showbag_price': '12.50',
     'showbag_value': '14',
     'slug': 'sour-patch-kids-showbag',
     'featured': false,
@@ -35257,7 +35257,7 @@ export const showbags = [
       'last_modified': '2024-08-15 15:12:29'
     },
     'showbag_price': '32',
-    'showbag_value': '80.4',
+    'showbag_value': '80.40',
     'slug': 'squishy-things-showbag',
     'featured': false,
     'items': [
@@ -36166,7 +36166,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '14.3',
+    'showbag_value': '14.30',
     'slug': 'super-kawaii-showbag',
     'featured': false,
     'items': [
@@ -36279,7 +36279,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '18',
-    'showbag_value': '32.9',
+    'showbag_value': '32.90',
     'slug': 'super-kit-kat',
     'featured': false,
     'items': [
@@ -36372,7 +36372,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '18',
-    'showbag_value': '25.1',
+    'showbag_value': '25.10',
     'slug': 'super-milkybar',
     'featured': false,
     'items': [
@@ -36612,7 +36612,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '18',
-    'showbag_value': '30.5',
+    'showbag_value': '30.50',
     'slug': 'super-smarties',
     'featured': false,
     'items': [
@@ -38244,7 +38244,7 @@ export const showbags = [
       'orientation': 'square',
       'last_modified': '2024-08-13 11:27:21'
     },
-    'showbag_price': '12.5',
+    'showbag_price': '12.50',
     'showbag_value': '14',
     'slug': 'the-natural-confectionery-co',
     'featured': false,
@@ -38754,7 +38754,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '28',
-    'showbag_value': '42.9',
+    'showbag_value': '42.90',
     'slug': 'the-wiggles-bag',
     'featured': false,
     'items': [
@@ -38857,7 +38857,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '77.6',
+    'showbag_value': '77.60',
     'slug': 'thomas-the-tank-showbag',
     'featured': false,
     'items': [
@@ -39289,7 +39289,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '30',
-    'showbag_value': '66.8',
+    'showbag_value': '66.80',
     'slug': 'toolman-showbag',
     'featured': false,
     'items': [
@@ -39838,7 +39838,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '5',
-    'showbag_value': '6.4',
+    'showbag_value': '6.40',
     'slug': 'trolli-showbag',
     'featured': false,
     'items': [
@@ -40326,7 +40326,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '72.6',
+    'showbag_value': '72.60',
     'slug': 'ultimate-fidget-showbag',
     'featured': false,
     'items': [
@@ -40475,7 +40475,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '89.3',
+    'showbag_value': '89.30',
     'slug': 'unicorn-showbag',
     'featured': false,
     'items': [
@@ -41267,7 +41267,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '32',
-    'showbag_value': '82.5',
+    'showbag_value': '82.50',
     'slug': 'wednesday-showbag',
     'featured': false,
     'items': [
@@ -41381,7 +41381,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '35',
-    'showbag_value': '115.8',
+    'showbag_value': '115.80',
     'slug': 'white-glo-toothpaste',
     'featured': false,
     'items': [
@@ -41504,7 +41504,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '14.4',
+    'showbag_value': '14.40',
     'slug': 'wicked-fizz-zombie-chews-combo-showbag',
     'featured': false,
     'items': [
@@ -41639,7 +41639,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '8.4',
+    'showbag_value': '8.40',
     'slug': 'wicked-fizz-showbag',
     'featured': false,
     'items': [
@@ -41728,7 +41728,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '5',
-    'showbag_value': '6.5',
+    'showbag_value': '6.50',
     'slug': 'wizz-fizz-lil-fizz-bag',
     'featured': false,
     'items': [
@@ -41807,7 +41807,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '25',
-    'showbag_value': '31.5',
+    'showbag_value': '31.50',
     'slug': 'wizz-fizz-mega-fizz-bag',
     'featured': false,
     'items': [
@@ -42644,7 +42644,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '25',
-    'showbag_value': '66.6',
+    'showbag_value': '66.60',
     'slug': 'worlds-biggest-jumbo-showbag',
     'featured': false,
     'items': [
@@ -42903,7 +42903,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '10',
-    'showbag_value': '13.8',
+    'showbag_value': '13.80',
     'slug': 'x-treme-sour-straps-showbag',
     'featured': false,
     'items': [
@@ -43450,7 +43450,7 @@ export const showbags = [
       'last_modified': '2024-08-13 11:27:21'
     },
     'showbag_price': '6',
-    'showbag_value': '6.5',
+    'showbag_value': '6.50',
     'slug': 'zombie-chews-showbag',
     'featured': false,
     'items': [
