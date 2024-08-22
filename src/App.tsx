@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'wouter';
 import { type ShowbagItem } from './showbags.ts';
 import Catalog from './components/Catalog.tsx';
-import Wishlist from './components/Wishlist';
+import List from './components/List';
 import classes from './App.module.css';
 import { Toaster } from 'react-hot-toast';
 import ProductProvider from './components/Product/ProductProvider.tsx';
@@ -10,13 +10,13 @@ import ProductProvider from './components/Product/ProductProvider.tsx';
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags } = props;
   const [location] = useLocation();
-  const [shoppingBagItems, setShoppingBagItems] = useState<ShowbagItem['slug'][]>(() => {
-    const shoppingBag = localStorage.getItem('shopping-bag');
-    return shoppingBag ? JSON.parse(shoppingBag) : [];
+  const [listItems, setListItems] = useState<ShowbagItem['slug'][]>(() => {
+    const showBagList = localStorage.getItem('show-bag-list');
+    return showBagList ? JSON.parse(showBagList) : [];
   });
 
-  const handleToggleInShoppingBag = (itemSlug: ShowbagItem['slug']) => {
-    setShoppingBagItems((prevItems) => {
+  const handleToggleInList = (itemSlug: ShowbagItem['slug']) => {
+    setListItems((prevItems) => {
       if (prevItems.includes(itemSlug)) {
         return prevItems.filter((prevItemSlug) => prevItemSlug !== itemSlug);
       }
@@ -26,8 +26,8 @@ const App = (props: { showbags: ShowbagItem[] }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem('shopping-bag', JSON.stringify(shoppingBagItems));
-  }, [shoppingBagItems]);
+    localStorage.setItem('show-bag-list', JSON.stringify(listItems));
+  }, [listItems]);
 
   return (
     <>
@@ -35,13 +35,13 @@ const App = (props: { showbags: ShowbagItem[] }) => {
       <header className={classes.header}>
         <img src="/show_logo.svg" alt="" className={classes.image} />
         <div className={classes.date}>August 31st - September 8th</div>
-        <div className={classes.wishlistTriggerContainer}>
-          <Link to="/wishlist" className={classes.bagLink}>
+        <div className={classes.listTriggerContainer}>
+          <Link to="/list" className={classes.listLink}>
             <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" fill="currentColor" viewBox="0 0 16 16">
               <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
             </svg>
-            <div className={classes.shoppingItemsCount}>{shoppingBagItems.length}</div>
-            <p>Wishlist</p>
+            <div className={classes.listItemsCount}>{listItems.length}</div>
+            <p>List</p>
           </Link>
         </div>
       </header>
@@ -80,24 +80,24 @@ const App = (props: { showbags: ShowbagItem[] }) => {
           </nav>
 
           <div>
-            {!['/', '/wishlist'].includes(location) && (
-              <ProductProvider items={showbags} onToggleInShoppingBag={handleToggleInShoppingBag} shoppingBagItems={shoppingBagItems}/>
+            {!['/', '/list'].includes(location) && (
+              <ProductProvider items={showbags} onToggleInList={handleToggleInList} listItems={listItems}/>
             )}
             <div className="flex items-center flex-wrap">
               <Catalog
                 items={showbags}
-                onToggleInShoppingBag={handleToggleInShoppingBag}
-                shoppingBagItems={shoppingBagItems}
+                onToggleInList={handleToggleInList}
+                listItems={listItems}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {location === '/wishlist' && (
-        <Wishlist
-          items={showbags.filter((bagItem) => shoppingBagItems.includes(bagItem.slug))}
-          onRemove={handleToggleInShoppingBag}
+      {location === '/list' && (
+        <List
+          items={showbags.filter((listItem) => listItems.includes(listItem.slug))}
+          onRemove={handleToggleInList}
         />
       )}
     </>

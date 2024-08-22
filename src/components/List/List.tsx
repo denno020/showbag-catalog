@@ -1,19 +1,19 @@
 import classnames from 'classnames';
 import toast from 'react-hot-toast';
 import FocusTrap from 'focus-trap-react';
-import WishlistItem from './WishlistItem.tsx';
+import ListItem from './ListItem.tsx';
 import { useClose } from '../../hooks/useClose.ts';
 import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
-import classes from './Wishlist.module.css';
+import classes from './List.module.css';
 import { updateQueryStringWithArray } from '../../utils/updateQueryStringWithArray.ts';
 
-type WishlistProps = {
+type ListProps = {
   items: ShowbagItem[];
   onRemove: (slug: ShowbagItem['slug']) => void;
 };
 
-const Wishlist = (props: WishlistProps) => {
+const List = (props: ListProps) => {
   const { items, onRemove } = props;
   const { copyTextToClipboard } = useClipboard();
 
@@ -24,7 +24,7 @@ const Wishlist = (props: WishlistProps) => {
 
     if (navigator.canShare && navigator.canShare()) {
       await navigator.share({
-        title: 'My Show Bag Wishlist for Royal Adelaide Show',
+        title: 'My Show Bag List for Royal Adelaide Show',
         url: location.href
       });
       return;
@@ -37,7 +37,7 @@ const Wishlist = (props: WishlistProps) => {
   return (
     <div className={`z-50 ${classes.overlay}`}>
       <FocusTrap>
-      <aside ref={ref} className={`fixed top-0 right-0 z-50 h-full bg-white shadow-lg ${classes.wishlist}`}>
+      <aside ref={ref} className={`fixed top-0 right-0 z-50 h-full bg-white shadow-lg ${classes.list}`}>
         <header className={classes.header}>
           <button onClick={handlePrepareShareURL} className={classnames(classes.btn, classes.shareBtn)}>
             <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30" fill="currentColor">
@@ -46,7 +46,7 @@ const Wishlist = (props: WishlistProps) => {
 
             <span className="text-sm">Share</span>
           </button>
-          <h2 className="text-xl font-semibold text-center">Show Bags Wish List</h2>
+          <h2 className="text-xl font-semibold text-center">Show Bags List</h2>
           <button onClick={close} className={classnames(classes.btn, classes.closeBtn)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -70,10 +70,10 @@ const Wishlist = (props: WishlistProps) => {
         <div className="px-6 py-3">
           <div className="flex flex-col gap-4">
             {items.length === 0 && (
-              <p>Nothing added to your wishlist!</p>
+              <p>Nothing added to your list!</p>
             )}
             {items.map((item) => (
-              <WishlistItem key={item.slug} item={item} onRemove={onRemove} />
+              <ListItem key={item.slug} item={item} onRemove={onRemove} />
             ))}
           </div>
         </div>
@@ -83,4 +83,4 @@ const Wishlist = (props: WishlistProps) => {
   );
 };
 
-export default Wishlist;
+export default List;

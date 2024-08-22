@@ -1,18 +1,18 @@
 import type {ShowbagItem} from "../../showbags.ts";
-import classes from './WishlistItem.module.css';
+import classes from './ListItem.module.css';
 
 
-type WishlistItemProps = {
+type ListItemProps = {
   item: ShowbagItem
   onRemove: (slug: ShowbagItem['slug']) => void
 }
 
-const WishlistItem = (props: WishlistItemProps) => {
+const ListItem = (props: ListItemProps) => {
   const {item, onRemove} = props;
   const { image, title, showbag_price, slug } = item;
 
   return (
-    <div className={classes.wishlistItem}>
+    <div className={classes.listItem}>
       <div>
         <img src={image.permalink} alt="Showbag preview" className="w-28 aspect-auto"/>
       </div>
@@ -32,4 +32,4 @@ const WishlistItem = (props: WishlistItemProps) => {
   )
 }
 
-export default WishlistItem
+export default ListItem

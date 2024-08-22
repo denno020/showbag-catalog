@@ -4,21 +4,21 @@ import Product from './Product';
 
 type ProductProviderProps = {
   items: ShowbagItem[];
-  shoppingBagItems: ShowbagItem['slug'][];
-  onToggleInShoppingBag: (slug: ShowbagItem['slug']) => void;
+  listItems: ShowbagItem['slug'][];
+  onToggleInList: (slug: ShowbagItem['slug']) => void;
 };
 
 const ProductProvider = (props: ProductProviderProps) => {
-  const { items, onToggleInShoppingBag, shoppingBagItems } = props;
+  const { items, onToggleInList: onToggleInList, listItems } = props;
   const [location] = useLocation();
 
-  const item = items.find((bagItem) => bagItem.slug === location.replace('/', ''));
+  const item = items.find((listItem) => listItem.slug === location.replace('/', ''));
 
   if (!item) {
     return null;
   }
 
-  return <Product item={item} onToggleInBag={onToggleInShoppingBag} isInBag={shoppingBagItems.includes(item.slug)} />;
+  return <Product item={item} onToggleInList={onToggleInList} isInList={listItems.includes(item.slug)} />;
 };
 
 export default ProductProvider;

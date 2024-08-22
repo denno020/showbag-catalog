@@ -4,12 +4,12 @@ import classes from './Card.module.css';
 
 export type CardProps = {
   item: ShowbagItem;
-  onToggleInShoppingBag: (slug: ShowbagItem['slug']) => void;
-  isInBag: boolean;
+  onToggleInList: (slug: ShowbagItem['slug']) => void;
+  isInList: boolean;
 };
 
 const Card = (props: CardProps) => {
-  const { item, onToggleInShoppingBag, isInBag } = props;
+  const { item, onToggleInList, isInList } = props;
   const { slug, image, title, showbag_price, showbag_value } = item;
 
   return (
@@ -33,7 +33,7 @@ const Card = (props: CardProps) => {
           </div>
         </div>
       </Link>
-      <button className="flex gap-2" onClick={() => onToggleInShoppingBag(slug)}>
+      <button className="flex gap-2" onClick={() => onToggleInList(slug)}>
         <svg
           className="h-6 w-6 fill-current text-gray-500 hover:text-black"
           viewBox="0 0 15 15"
@@ -47,7 +47,7 @@ const Card = (props: CardProps) => {
             fill="currentColor"
           />
         </svg>
-        <p>{isInBag ? 'Remove from' : 'Add to'} Wish List</p>
+        <p>{isInList ? 'Remove from' : 'Add to'} List</p>
       </button>
     </div>
   );

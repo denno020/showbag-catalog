@@ -27,7 +27,7 @@
         text-align: center;
         margin-top: 20px;
     }
-    .wishlistTriggerContainer {
+    .listTriggerContainer {
         order: 2;
     }
 }
@@ -41,14 +41,14 @@
     font-size: 1.5rem;
 }
 
-.bagLink {
+.listLink {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.shoppingItemsCount {
+.listItemsCount {
     position: absolute;
     top: 10px;
     left: 50%;

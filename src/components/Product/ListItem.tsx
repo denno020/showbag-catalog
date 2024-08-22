@@ -1,9 +1,9 @@
 import type { ShowbagItem } from '../../showbags';
 
-type BagItemProps = {
+type ListItemProps = {
   item: ShowbagItem['items'][0];
 };
-const BagItem = (props: BagItemProps) => {
+const ListItem = (props: ListItemProps) => {
   const { item_title, item_quantity } = props.item;
 
   if (item_quantity === 0) {
@@ -21,4 +21,4 @@ const BagItem = (props: BagItemProps) => {
   );
 };
 
-export default BagItem;
+export default ListItem;

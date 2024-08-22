@@ -3,16 +3,16 @@ import FocusTrap from 'focus-trap-react';
 import { useClose } from '../../hooks/useClose.ts';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Product.module.css';
-import BagItem from './BagItem.tsx';
+import ListItem from './ListItem';
 
 type ProductProps = {
   item: ShowbagItem;
-  isInBag: boolean;
-  onToggleInBag: (slug: ShowbagItem['slug']) => void;
+  isInList: boolean;
+  onToggleInList: (slug: ShowbagItem['slug']) => void;
 };
 
 const Product = (props: ProductProps) => {
-  const { item, onToggleInBag, isInBag } = props;
+  const { item, onToggleInList: onToggleInList, isInList } = props;
 
   const { ref, close } = useClose();
 
@@ -34,9 +34,9 @@ const Product = (props: ProductProps) => {
             <div>
               <p className="font-bold">Inside the bag</p>
               <ul>
-                {item.items.map((bagItem) => (
+                {item.items.map((listItem) => (
                   <li>
-                    <BagItem item={bagItem} />
+                    <ListItem item={listItem} />
                   </li>
                 ))}
               </ul>
@@ -52,11 +52,11 @@ const Product = (props: ProductProps) => {
             </div>
             <div>
               <button
-                onClick={() => onToggleInBag(item.slug)}
+                onClick={() => onToggleInList(item.slug)}
                 className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
               >
-                {isInBag ? 'Remove from' : 'Add to'}&nbsp;
-                Wishlist
+                {isInList ? 'Remove from' : 'Add to'}&nbsp;
+                List
               </button>
             </div>
           </div>

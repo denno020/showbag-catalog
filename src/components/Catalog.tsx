@@ -3,19 +3,19 @@ import Card from './Card';
 
 type CatalogProps = {
   items: ShowbagItem[];
-  onToggleInShoppingBag: (itemSlug: ShowbagItem['slug']) => void;
-  shoppingBagItems: ShowbagItem['slug'][];
+  onToggleInList: (itemSlug: ShowbagItem['slug']) => void;
+  listItems: ShowbagItem['slug'][];
 };
 
 const Catalog = (props: CatalogProps) => {
-  const { items, onToggleInShoppingBag, shoppingBagItems } = props;
+  const { items, onToggleInList: onToggleInList, listItems } = props;
 
   return items.map((item) => (
     <Card
       key={item.id}
       item={item}
-      onToggleInShoppingBag={onToggleInShoppingBag}
-      isInBag={shoppingBagItems.includes(item.slug)}
+      onToggleInList={onToggleInList}
+      isInList={listItems.includes(item.slug)}
     />
   ));
 };
