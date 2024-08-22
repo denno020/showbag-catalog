@@ -33,7 +33,9 @@ const App = (props: { showbags: ShowbagItem[] }) => {
     <>
       <Toaster />
       <header className={classes.header}>
-        <img src="/show_logo.svg" alt="" className={classes.image} />
+        <Link to="/" className={classes.logoLink}>
+          <img src="/show_logo.svg" alt="" className={classes.image} />
+        </Link>
         <div className={classes.date}>August 31st - September 8th</div>
         <div className={classes.listTriggerContainer}>
           <Link to="/list" className={classes.listLink}>
