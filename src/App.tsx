@@ -9,9 +9,11 @@ import ProductProvider from './components/Product/ProductProvider';
 import { useShowbags } from './hooks/useShowbags.ts';
 import { pageSize } from './constants/index.ts';
 import classes from './App.module.css';
+import Search from './components/Search/Search.tsx';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
-  const { showbags, page } = useShowbags(props);
+  const { showbags, totalCount } = useShowbags(props);
+
   const [location] = useLocation();
   const [listItems, setListItems] = useState<ShowbagItem['slug'][]>(() => {
     const showBagList = localStorage.getItem('show-bag-list');
@@ -69,17 +71,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
                   </svg>
                 </a>
 
-                <a className="pl-3 inline-block no-underline hover:text-black" href="#">
-                  <svg
-                    className="fill-current hover:text-black"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
-                  </svg>
-                </a>
+                <Search />
               </div>
             </div>
           </nav>
@@ -94,7 +86,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
           </div>
         </div>
         <div className={classes.paginationContainer}>
-          <Pagination pageCount={props.showbags.length / pageSize} />
+          <Pagination pageCount={totalCount / pageSize} />
         </div>
       </section>
 

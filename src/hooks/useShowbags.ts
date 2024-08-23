@@ -12,11 +12,14 @@ export const useShowbags = (props: UseShowbags) => {
   const searchString = useSearch();
   const searchParams = new URLSearchParams(searchString);
   const page = searchParams.get('page') || 1;
+  const search = searchParams.get('search') || '';
 
   const startIndex = (Number(page) - 1) * pageSize;
 
+  const searchedShowbags = showbags.filter((bag) => bag.title.toLowerCase().includes(search.toLowerCase()));
+
   return {
-    showbags: showbags.slice(startIndex, startIndex + pageSize),
-    page
+    showbags: searchedShowbags.slice(startIndex, startIndex + pageSize),
+    totalCount: searchedShowbags.length
   };
 };

@@ -1,6 +1,6 @@
 type SetQueryParam = {
   name: string;
-  value: string | number;
+  value: string | number | null;
 };
 
 export const setQueryParam = (params: SetQueryParam[], type: 'push' | 'replace') => {
