@@ -41,7 +41,12 @@ const List = (props: ListProps) => {
     }
 
     copyTextToClipboard(location.href);
-    toast.success('URL has been copied to your clipboard!');
+    toast.success(
+      `URL has been copied to your clipboard! Please note, changes won't be persisted after the URL is shared, you'll need to share a new URL`,
+      {
+        duration: 10000
+      }
+    );
   };
 
   const handleChangeName = () => {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation } from 'wouter';
+import { useLocation, useSearch } from 'wouter';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
 import Link from './components/Link';
@@ -11,16 +11,20 @@ import { useShowbags } from './hooks/useShowbags.ts';
 import { pageSize } from './constants/index.ts';
 import classes from './App.module.css';
 import Search from './components/Search/Search.tsx';
+import { useList } from './hooks/useList.ts';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags, totalCount } = useShowbags(props);
+  const searchParam = useSearch();
 
   const [location] = useLocation();
-  const [listItems, setListItems] = useState<ShowbagItem['slug'][]>(() => {
-    const showBagList = localStorage.getItem('show-bag-list');
-    return showBagList ? JSON.parse(showBagList) : [];
+  const [listItems, setListItems] = useList();
+  const [userName, setUserName] = useState(() => {
+    // localStorage.getItem('showbag-user-name') || 'My'
+    const search = new URLSearchParams(searchParam);
+    const name = search.get('name') || '';
+    return name;
   });
-  const [userName, setUserName] = useState(() => localStorage.getItem('showbag-user-name') || 'My');
 
   const handleToggleInList = (itemSlug: ShowbagItem['slug']) => {
     setListItems((prevItems) => {
