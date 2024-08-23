@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'wouter';
+import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
 import Catalog from './components/Catalog.tsx';
+import Pagination from './components/Pagination';
 import List from './components/List';
+import ProductProvider from './components/Product/ProductProvider';
+import { useShowbags } from './hooks/useShowbags.ts';
+import { pageSize } from './constants/index.ts';
 import classes from './App.module.css';
-import { Toaster } from 'react-hot-toast';
-import ProductProvider from './components/Product/ProductProvider.tsx';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
-  const { showbags } = props;
+  const { showbags, page } = useShowbags(props);
   const [location] = useLocation();
   const [listItems, setListItems] = useState<ShowbagItem['slug'][]>(() => {
     const showBagList = localStorage.getItem('show-bag-list');
@@ -83,24 +86,20 @@ const App = (props: { showbags: ShowbagItem[] }) => {
 
           <div>
             {!['/', '/list'].includes(location) && (
-              <ProductProvider items={showbags} onToggleInList={handleToggleInList} listItems={listItems}/>
+              <ProductProvider items={showbags} onToggleInList={handleToggleInList} listItems={listItems} />
             )}
             <div className="flex items-center flex-wrap">
-              <Catalog
-                items={showbags}
-                onToggleInList={handleToggleInList}
-                listItems={listItems}
-              />
+              <Catalog items={showbags} onToggleInList={handleToggleInList} listItems={listItems} />
             </div>
           </div>
+        </div>
+        <div className={classes.paginationContainer}>
+          <Pagination pageCount={props.showbags.length / pageSize} />
         </div>
       </section>
 
       {location === '/list' && (
-        <List
-          items={showbags.filter((listItem) => listItems.includes(listItem.slug))}
-          onRemove={handleToggleInList}
-        />
+        <List items={showbags.filter((listItem) => listItems.includes(listItem.slug))} onRemove={handleToggleInList} />
       )}
     </>
   );
