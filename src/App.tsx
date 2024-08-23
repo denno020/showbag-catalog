@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useLocation, Link } from 'wouter';
+import { useLocation } from 'wouter';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
+import Link from './components/Link';
 import Catalog from './components/Catalog.tsx';
 import Pagination from './components/Pagination';
 import List from './components/List';

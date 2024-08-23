@@ -20,14 +20,12 @@ const Product = (props: ProductProps) => {
     <div className={classes.overlay}>
       <FocusTrap>
         <div ref={ref} className={classes.product}>
-            <div className="flex flex-col justify-center">
-                <div className={classes.imageContainer}>
-                    <img src={item.image.permalink} alt="Showbag preview" />
-                    <div className={classnames('backdrop-blur-md', classes.valueContainer)}>
-                        ${item.showbag_value} value!
-                    </div>
-                </div>
+          <div className="flex flex-col justify-center">
+            <div className={classes.imageContainer}>
+              <img src={item.image.permalink} alt="Showbag preview" />
+              <div className={classnames('backdrop-blur-md', classes.valueContainer)}>${item.showbag_value} value!</div>
             </div>
+          </div>
           <div className="flex flex-col gap-4">
             <div className="text-2xl">{item.title}</div>
             <div className="text-3xl">${item.showbag_price}</div>
@@ -35,7 +33,7 @@ const Product = (props: ProductProps) => {
               <p className="font-bold">Inside the bag</p>
               <ul>
                 {item.items.map((listItem) => (
-                  <li>
+                  <li key={listItem.item_id}>
                     <ListItem item={listItem} />
                   </li>
                 ))}
@@ -55,8 +53,7 @@ const Product = (props: ProductProps) => {
                 onClick={() => onToggleInList(item.slug)}
                 className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
               >
-                {isInList ? 'Remove from' : 'Add to'}&nbsp;
-                List
+                {isInList ? 'Remove from' : 'Add to'}&nbsp; List
               </button>
             </div>
           </div>

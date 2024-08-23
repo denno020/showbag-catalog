@@ -1,4 +1,4 @@
-import { Link } from 'wouter';
+import Link from '../Link';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Card.module.css';
 
@@ -16,7 +16,13 @@ const Card = (props: CardProps) => {
     <div
       className={`w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:shadow-lg relative ${classes.card}`}
     >
-      <Link to={slug} className="flex flex-col gap-3">
+      <Link
+        to={slug}
+        className="flex flex-col gap-3"
+        onClick={() => {
+          /*Don't scroll to top*/
+        }}
+      >
         <img alt="Bag preview" className="w-full" src={image.permalink} />
         <div className="pt-3 flex items-center justify-between">
           <p className="text-xl">{title}</p>
