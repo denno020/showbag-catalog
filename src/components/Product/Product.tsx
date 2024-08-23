@@ -56,7 +56,7 @@ const Product = (props: ProductProps) => {
               <p className="font-bold">Where to find</p>
               <ul>
                 {item.showbag_stalls.map((stall) => (
-                  <li>{stall.title}</li>
+                  <li key={stall.id}>{stall.title}</li>
                 ))}
               </ul>
             </div>
