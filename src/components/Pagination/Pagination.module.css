@@ -1,0 +1,70 @@
+.pagination {
+    display: flex;
+}
+
+.pageNumber {
+    --border-bottom-color: black;
+    width: 1.875em;
+    height: 1.875em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+}
+
+.activePage {
+    border-bottom-color: var(--border-bottom-color);
+}
+
+.pageNumber:hover {
+    border-bottom-color: var(--border-bottom-color);
+}
+
+.previousLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.875em;
+    margin-right: 5px;
+}
+
+.previousLink::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='grey' aria-hidden='true' class='kn of si axv'%3E%3Cpath fill-rule='evenodd' d='M18 10a.75.75 0 01-.75.75H4.66l2.1 1.95a.75.75 0 11-1.02 1.1l-3.5-3.25a.75.75 0 010-1.1l3.5-3.25a.75.75 0 111.02 1.1l-2.1 1.95h12.59A.75.75 0 0118 10z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+    width: 20px;
+    line-height: 12px;
+    display:inline-block;
+    margin-right: 5px;
+    transition: transform 150ms ease;
+}
+
+.previousLink:hover:not([aria-disabled='true'])::before,
+.previousLink:focus:not([aria-disabled='true'])::before {
+    transform: translateX(-3px);
+}
+
+.nextLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.875em;
+    margin-left: 5px;
+}
+
+.nextLink::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='grey' aria-hidden='true' class='jw of si axv'%3E%3Cpath fill-rule='evenodd' d='M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+    width: 20px;
+    line-height: 12px;
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 150ms ease;
+}
+
+.nextLink:hover:not([aria-disabled='true'])::after,
+.nextLink:focus:not([aria-disabled='true'])::after {
+    transform: translateX(3px);
+}
+
+.disabledDirectionControl {
+    opacity: 0.3;
+    cursor: not-allowed;
+}

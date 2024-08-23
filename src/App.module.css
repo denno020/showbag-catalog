@@ -54,3 +54,8 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+.paginationContainer {
+    display: grid;
+    justify-content: center;
+}

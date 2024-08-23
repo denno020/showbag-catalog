@@ -6,7 +6,7 @@ import { useClose } from '../../hooks/useClose.ts';
 import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './List.module.css';
-import { updateQueryStringWithArray } from '../../utils/updateQueryStringWithArray.ts';
+import { updateQueryStringWithList } from '../../utils/updateQueryStringWithArray.ts';
 
 type ListProps = {
   items: ShowbagItem[];
@@ -20,7 +20,7 @@ const List = (props: ListProps) => {
   const { ref, close } = useClose();
 
   const handlePrepareShareURL = async () => {
-    updateQueryStringWithArray('unnamed', items);
+    updateQueryStringWithList('unnamed', items);
 
     if (navigator.canShare && navigator.canShare()) {
       await navigator.share({
