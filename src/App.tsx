@@ -80,7 +80,10 @@ const App = (props: { showbags: ShowbagItem[] }) => {
       </section>
 
       {location === '/list' && (
-        <List items={showbags.filter((listItem) => listItems.includes(listItem.slug))} onRemove={handleToggleInList} />
+        <List
+          items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
+          onRemove={handleToggleInList}
+        />
       )}
     </>
   );
