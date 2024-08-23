@@ -20,6 +20,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
     const showBagList = localStorage.getItem('show-bag-list');
     return showBagList ? JSON.parse(showBagList) : [];
   });
+  const [userName, setUserName] = useState(() => localStorage.getItem('showbag-user-name') || 'My');
 
   const handleToggleInList = (itemSlug: ShowbagItem['slug']) => {
     setListItems((prevItems) => {
@@ -83,6 +84,8 @@ const App = (props: { showbags: ShowbagItem[] }) => {
         <List
           items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
           onRemove={handleToggleInList}
+          userName={userName}
+          setUserName={setUserName}
         />
       )}
     </>
