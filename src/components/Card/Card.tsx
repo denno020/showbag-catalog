@@ -1,4 +1,3 @@
-import { useSearch } from 'wouter';
 import Link from '../Link';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Card.module.css';
@@ -12,15 +11,13 @@ export type CardProps = {
 const Card = (props: CardProps) => {
   const { item, onToggleInList, isInList } = props;
   const { slug, image, title, showbag_price, showbag_value } = item;
-  const searchParams = useSearch();
-  const search = new URLSearchParams(searchParams).get('search') || '';
 
   return (
     <div
       className={`w-full sm:w-1/2 md:w-1/3 xl:w-1/4 p-6 flex flex-col items-center gap-4 hover:shadow-lg relative ${classes.card}`}
     >
       <Link
-        to={`${slug}${search ? `?search=${search}` : ''}`}
+        to={slug}
         className="flex flex-col gap-3"
         onClick={() => {
           /*Don't scroll to top*/
