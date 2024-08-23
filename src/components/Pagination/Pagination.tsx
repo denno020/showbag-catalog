@@ -17,6 +17,7 @@ const Pagination = (props: ReactPaginateProps) => {
   return (
     <ReactPaginate
       {...props}
+      pageCount={Math.ceil(props.pageCount)}
       onPageChange={handlePageChange}
       marginPagesDisplayed={1}
       forcePage={Number(page) - 1}
