@@ -60,18 +60,6 @@ const App = (props: { showbags: ShowbagItem[] }) => {
               <p className="uppercase tracking-wide font-bold text-gray-800 text-xl">Showbags</p>
 
               <div className="flex items-center" id="store-nav-content">
-                <a className="pl-3 inline-block no-underline hover:text-black" href="#">
-                  <svg
-                    className="fill-current hover:text-black"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                  </svg>
-                </a>
-
                 <Search />
               </div>
             </div>
