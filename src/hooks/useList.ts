@@ -1,25 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useSearch } from 'wouter';
 import toast from 'react-hot-toast';
+import { useStore } from '../store/useStore';
 import type { ShowbagItem } from '../showbags';
+import type { StoreType } from '../store/useStore';
 
 /**
  * Load list data from query string, local storage or not at all!
  * Will handle list name collisions
  */
-export const useList = (): [ShowbagItem['slug'][], React.Dispatch<React.SetStateAction<string[]>>] => {
+export const useList = (): [ShowbagItem['slug'][], StoreType['setListItems']] => {
   const searchParam = useSearch();
-
-  const [list, setList] = useState<ShowbagItem['slug'][]>(() => {
-    const search = new URLSearchParams(searchParam);
-    const itemsQueryParam = search.get('items')?.split(',') || [];
-    // Search param takes precendence
-    if (itemsQueryParam.length > 0) return itemsQueryParam;
-
-    const showBagList = localStorage.getItem(`show-bag-list`);
-
-    return showBagList ? JSON.parse(showBagList) : [];
-  });
+  const list = useStore((state) => state.listItems);
+  const setList = useStore((state) => state.setListItems);
 
   useEffect(() => {
     const search = new URLSearchParams(searchParam);
