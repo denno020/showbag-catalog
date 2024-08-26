@@ -6,7 +6,7 @@ interface Props {
 const {title} = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="valentine">
 
 <head>
   <meta charset="UTF-8">
@@ -25,7 +25,7 @@ const {title} = Astro.props;
 
   </head>
 
-  <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+  <body class="text-gray-600 work-sans leading-normal text-base tracking-normal">
     <slot/>
   </body>
 </html>

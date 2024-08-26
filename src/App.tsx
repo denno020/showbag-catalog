@@ -50,7 +50,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
           </p>
         </div>
       </Route>
-      <section className="bg-white">
+      <section>
         <div className="container mx-auto flex items-center flex-wrap">
           <Route path={'/search'}>
             <nav id="store" className="w-full top-0 px-6 py-1">
