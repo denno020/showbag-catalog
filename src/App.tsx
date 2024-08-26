@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useSearch, Route, Switch } from 'wouter';
+import { useSearch, Switch } from 'wouter';
+import Route from './components/Route';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
 import Link from './components/Link';
