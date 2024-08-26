@@ -7,6 +7,11 @@ const BottomNavigation = () => {
   const [location, setLocation] = useLocation();
   const totalListItems = useStore((state) => state.listItems.length);
 
+  const handleNavigateToList = () => {
+    setLocation('/list');
+    window.scroll(0, 0);
+  };
+
   return (
     <BottomNavigationDaisyUI className="z-40">
       <BottomNavigationDaisyUI.Item active={location === '/'} onClick={() => setLocation('/')}>
@@ -24,7 +29,7 @@ const BottomNavigation = () => {
         </svg>
         <div>Search</div>
       </BottomNavigationDaisyUI.Item>
-      <BottomNavigationDaisyUI.Item active={location === '/list'} onClick={() => setLocation('/list')}>
+      <BottomNavigationDaisyUI.Item active={location === '/list'} onClick={handleNavigateToList}>
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 16 16">
           <path
             fill-rule="evenodd"
