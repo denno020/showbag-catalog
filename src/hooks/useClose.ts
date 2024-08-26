@@ -9,10 +9,20 @@ type UseCloseProps = {
    * and therefore doesn't have anywhere to history.back to
    */
   fallbackCloseTo?: string;
+  /**
+   * Should clicking outside the component trigger a close
+   * @default true
+   */
+  useClickOutside?: boolean;
+  /**
+   * Should hitting the escape key trigger a close
+   * @default true
+   */
+  useEscapeButton?: boolean;
 };
 
 export const useClose = (props?: UseCloseProps) => {
-  const { fallbackCloseTo = '/' } = props || {};
+  const { fallbackCloseTo = '/', useClickOutside = true, useEscapeButton = true } = props || {};
   const ref = useRef(null);
   const searchParam = useSearch();
   const [, setLocation] = useLocation();
@@ -27,10 +37,10 @@ export const useClose = (props?: UseCloseProps) => {
 
   useOutsideClick({
     ref,
-    handler: close
+    handler: useClickOutside ? close : () => {}
   });
 
-  useEscapeKey(close);
+  useEscapeKey(() => useEscapeButton && close);
 
   return {
     ref,
