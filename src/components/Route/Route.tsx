@@ -7,7 +7,6 @@ type RouteProps = WouteProps & {
 
 const Route = (props: RouteProps) => {
   const [location] = useLocation();
-  console.log({ location });
 
   if (!props.paths) {
     return <Woute {...props} />;
