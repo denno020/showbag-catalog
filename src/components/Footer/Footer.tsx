@@ -10,7 +10,7 @@ const Footer = () => {
                 Find this app useful and want to say thanks? In honour of Steptember, and all the steps you'll be taking
                 to pick up your showbags, please consider donating to the{' '}
                 <a
-                  className="underline inline-flex items-center"
+                  className="underline inline-flex items-center link link-primary"
                   href="https://donate.cerebralpalsy.org.au/"
                   target="_blank"
                 >
