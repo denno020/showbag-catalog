@@ -39,7 +39,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
         </Link>
         <div className={classes.date}>August 31st - September 8th</div>
       </header>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-6">
         <p>
           This site isn't associated with the official website. If you would like the official website instead, please{' '}
           <a href="https://www.theshow.com.au/" target="_blank" className="link">
