@@ -1,4 +1,5 @@
 import ReactPaginate from 'react-paginate';
+import classnames from 'classnames';
 import type { ReactPaginateProps } from 'react-paginate';
 import { useSearch } from 'wouter';
 import { setQueryParam } from '../../utils/setQueryParam';
@@ -23,8 +24,10 @@ const Pagination = (props: ReactPaginateProps) => {
       forcePage={Number(page) - 1}
       containerClassName={classes.pagination}
       activeLinkClassName={classes.activePage}
-      pageLinkClassName={classes.pageNumber}
+      pageLinkClassName={classnames('btn mx-1', classes.pageNumber)}
+      previousClassName="flex flex-col justify-center"
       previousLinkClassName={classes.previousLink}
+      nextClassName="flex flex-col justify-center"
       nextLinkClassName={classes.nextLink}
       disabledLinkClassName={classes.disabledDirectionControl}
     />
