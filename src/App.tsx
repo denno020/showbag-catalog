@@ -6,15 +6,16 @@ import { type ShowbagItem } from './showbags.ts';
 import Link from './components/Link';
 import { useStore } from './store/useStore.ts';
 import BottomNavigation from './components/BottomNavigation';
-import Catalog from './components/Catalog.tsx';
+import Catalog from './components/Catalog';
 import Pagination from './components/Pagination';
 import List from './components/List';
 import ProductProvider from './components/Product/ProductProvider';
 import { useShowbags } from './hooks/useShowbags.ts';
-import { pageSize } from './constants/index.ts';
+import { pageSize } from './constants';
 import classes from './App.module.css';
-import Search from './components/Search/Search.tsx';
+import Search from './components/Search';
 import { useList } from './hooks/useList.ts';
+import Footer from './components/Footer';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags, totalCount } = useShowbags(props);
@@ -39,14 +40,16 @@ const App = (props: { showbags: ShowbagItem[] }) => {
         </Link>
         <div className={classes.date}>August 31st - September 8th</div>
       </header>
-      <div className="container mx-auto px-6">
-        <p>
-          This site isn't associated with the official website. If you would like the official website instead, please{' '}
-          <a href="https://www.theshow.com.au/" target="_blank" className="link">
-            click here
-          </a>
-        </p>
-      </div>
+      <Route path="/">
+        <div className="container mx-auto px-6">
+          <p>
+            This site isn't associated with the official website. If you would like the official website instead, please{' '}
+            <a href="https://www.theshow.com.au/" target="_blank" className="link">
+              click here
+            </a>
+          </p>
+        </div>
+      </Route>
       <section className="bg-white">
         <div className="container mx-auto flex items-center flex-wrap">
           <Route path={'/search'}>
@@ -59,31 +62,34 @@ const App = (props: { showbags: ShowbagItem[] }) => {
             </nav>
           </Route>
 
-          <Switch>
-            <Route path="/list">
-              <List
-                items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
-                onRemove={toggleInList}
-                userName={userName}
-                setUserName={setUserName}
-              />
-            </Route>
-            <Route path="/*">
-              <div>
-                <Route path="/:bagSlug">
-                  {/* {params => <UserPage id={params.bagSlug} />} */}
-                  <ProductProvider items={showbags} onToggleInList={toggleInList} listItems={listItems} />
-                </Route>
-                <div className="flex items-center flex-wrap">
-                  <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
-                </div>
-              </div>
-            </Route>
-          </Switch>
+          <Route path="/list">
+            <List
+              items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
+              onRemove={toggleInList}
+              userName={userName}
+              setUserName={setUserName}
+            />
+          </Route>
+          <Route paths={['/', '/search', '/:bagSlug']}>
+            <div className="flex items-center flex-wrap">
+              <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
+            </div>
+          </Route>
+          <Route path="/:bagSlug">
+            {(params) => <ProductProvider items={props.showbags} bagSlug={(params as { bagSlug: string }).bagSlug} />}
+          </Route>
         </div>
-        <div className={classes.paginationContainer}>
-          <Pagination pageCount={totalCount / pageSize} />
-        </div>
+
+        <Route paths={['/', '/search']}>
+          <div className={classes.paginationContainer}>
+            <Pagination pageCount={totalCount / pageSize} />
+          </div>
+        </Route>
+
+        <Route path="/">
+          <Footer />
+        </Route>
+
         <BottomNavigation />
       </section>
     </>
