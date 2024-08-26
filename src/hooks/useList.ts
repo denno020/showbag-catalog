@@ -26,7 +26,6 @@ export const useList = (): [ShowbagItem['slug'][], StoreType['setListItems']] =>
       ...itemsQueryParam.filter((x) => !showBagList.includes(x)),
       ...showBagList.filter((x: string) => !itemsQueryParam.includes(x))
     ];
-    console.log({ combined });
 
     if (combined.length > 0) {
       localStorage.setItem(`show-bag-list-${nameQueryParam}-old`, showBagList);
