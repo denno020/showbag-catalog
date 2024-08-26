@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { useLocation, useSearch, Route, Switch } from 'wouter';
+import { useState } from 'react';
+import { useSearch, Route, Switch } from 'wouter';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
 import Link from './components/Link';
@@ -20,7 +20,6 @@ const App = (props: { showbags: ShowbagItem[] }) => {
   const searchParam = useSearch();
   const toggleInList = useStore((state) => state.toggleInList);
 
-  const [location] = useLocation();
   const [listItems] = useList();
 
   const [userName, setUserName] = useState(() => {
