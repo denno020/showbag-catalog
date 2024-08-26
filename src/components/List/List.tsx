@@ -95,25 +95,6 @@ const List = (props: ListProps) => {
             )}
           </div>
         </div>
-        <button onClick={close} className={classnames(classes.btn, classes.closeBtn)}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <rect width="18" height="18" x="3" y="3" rx="2" />
-            <path d="M15 3v18" />
-            <path d="m8 9 3 3-3 3" />
-          </svg>
-
-          <span className="text-sm">Close</span>
-        </button>
       </header>
       <div className="px-6 py-3">
         <div className="flex flex-col gap-4">
@@ -123,6 +104,7 @@ const List = (props: ListProps) => {
           ))}
         </div>
       </div>
+      <footer>Total: ${items.reduce((total, item) => total + Number(item.showbag_price), 0)}</footer>
     </div>
   );
 };
