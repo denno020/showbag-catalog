@@ -34,12 +34,10 @@ const Card = (props: CardProps) => {
           </p>
         </div>
         <div className="flex justify-center">
-          <div className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none">
-            More Info
-          </div>
+          <div className="btn">More Info</div>
         </div>
       </Link>
-      <button className="flex gap-2" onClick={() => onToggleInList(slug)}>
+      <button className="flex gap-2 btn btn-ghost" onClick={() => onToggleInList(slug)}>
         <svg
           className="h-6 w-6 fill-current text-gray-500 hover:text-black"
           viewBox="0 0 15 15"
