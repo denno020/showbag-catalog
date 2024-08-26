@@ -9,7 +9,7 @@
     justify-content: space-between; 
     align-items: center; 
     width: 100%; 
-    background-color: #ffffff; 
+    background-color: var(--fallback-b1,oklch(var(--b1)/1)); 
 }
 
 @media (max-width: 620px) {
