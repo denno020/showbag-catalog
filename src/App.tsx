@@ -71,9 +71,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
             />
           </Route>
           <Route paths={['/', '/search', '/:bagSlug']}>
-            <div className="flex items-center flex-wrap">
-              <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
-            </div>
+            <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
           </Route>
           <Route path="/:bagSlug">
             {(params) => <ProductProvider items={props.showbags} bagSlug={(params as { bagSlug: string }).bagSlug} />}

@@ -1,5 +1,6 @@
 import type { ShowbagItem } from '../../showbags';
 import Card from '../Card';
+import classes from './Catalog.module.css';
 
 type CatalogProps = {
   items: ShowbagItem[];
@@ -10,9 +11,13 @@ type CatalogProps = {
 const Catalog = (props: CatalogProps) => {
   const { items, onToggleInList, listItems } = props;
 
-  return items.map((item) => (
-    <Card key={item.id} item={item} onToggleInList={onToggleInList} isInList={listItems.includes(item.slug)} />
-  ));
+  return (
+    <div className={classes.catalog}>
+      {items.map((item) => (
+        <Card key={item.id} item={item} onToggleInList={onToggleInList} isInList={listItems.includes(item.slug)} />
+      ))}
+    </div>
+  );
 };
 
 export default Catalog;
