@@ -54,11 +54,4 @@ export const useStore = create<StoreType>()(
     });
     return;
   }
-
-  const showBagList = localStorage.getItem(`show-bag-list`);
-  if (showBagList) {
-    useStore.setState({
-      listItems: JSON.parse(showBagList)
-    });
-  }
 })();
