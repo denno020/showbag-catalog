@@ -12,7 +12,7 @@ export const useShowbags = (props: UseShowbags) => {
   const searchString = useSearch();
   const searchParams = new URLSearchParams(searchString);
   const page = searchParams.get('page') || 1;
-  const search = searchParams.get('search') || '';
+  const search = searchParams.get('query') || '';
 
   const startIndex = (Number(page) - 1) * pageSize;
 

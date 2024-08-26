@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useSearch } from 'wouter';
+import { useLocation, useSearch, Route, Switch } from 'wouter';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
 import Link from './components/Link';
@@ -39,41 +39,53 @@ const App = (props: { showbags: ShowbagItem[] }) => {
         </Link>
         <div className={classes.date}>August 31st - September 8th</div>
       </header>
-      <section className="bg-white py-8">
+      <div className="container mx-auto">
+        <p>
+          This site isn't associated with the official website. If you would like the official website instead, please{' '}
+          <a href="https://www.theshow.com.au/" target="_blank" className="link">
+            click here
+          </a>
+        </p>
+      </div>
+      <section className="bg-white">
         <div className="container mx-auto flex items-center flex-wrap">
-          <nav id="store" className="w-full top-0 px-6 py-1">
-            <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-              <p className="uppercase tracking-wide font-bold text-gray-800 text-xl">Showbags</p>
-
-              <div className="flex items-center" id="store-nav-content">
-                <Search />
+          <Route path={'/search'}>
+            <nav id="store" className="w-full top-0 px-6 py-1">
+              <div className="w-full container mx-auto flex flex-wrap items-center justify-end mt-0 px-2 py-3">
+                <div className="flex items-center w-full" id="store-nav-content">
+                  <Search />
+                </div>
               </div>
-            </div>
-          </nav>
+            </nav>
+          </Route>
 
-          <div>
-            {!['/', '/list'].includes(location) && (
-              <ProductProvider items={showbags} onToggleInList={toggleInList} listItems={listItems} />
-            )}
-            <div className="flex items-center flex-wrap">
-              <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
-            </div>
-          </div>
+          <Switch>
+            <Route path="/list">
+              <List
+                items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
+                onRemove={toggleInList}
+                userName={userName}
+                setUserName={setUserName}
+              />
+            </Route>
+            <Route path="/*">
+              <div>
+                <Route path="/:bagSlug">
+                  {/* {params => <UserPage id={params.bagSlug} />} */}
+                  <ProductProvider items={showbags} onToggleInList={toggleInList} listItems={listItems} />
+                </Route>
+                <div className="flex items-center flex-wrap">
+                  <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
+                </div>
+              </div>
+            </Route>
+          </Switch>
         </div>
         <div className={classes.paginationContainer}>
           <Pagination pageCount={totalCount / pageSize} />
         </div>
         <BottomNavigation />
       </section>
-
-      {location === '/list' && (
-        <List
-          items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
-          onRemove={toggleInList}
-          userName={userName}
-          setUserName={setUserName}
-        />
-      )}
     </>
   );
 };

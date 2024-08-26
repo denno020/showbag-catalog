@@ -17,6 +17,7 @@
         display: grid;
         grid-template-columns: 1fr auto;
         grid-template-rows: auto auto;
+        justify-items: center;
     }
     .image {
         order: 1;
