@@ -13,8 +13,6 @@ import { useStore } from '../../store/useStore.ts';
 type ListProps = {
   items: ShowbagItem[];
   onRemove: (slug: ShowbagItem['slug']) => void;
-  userName?: string;
-  setUserName: (name: string) => void;
 };
 
 const List = (props: ListProps) => {
