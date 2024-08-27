@@ -85,7 +85,6 @@ const App = (props: { showbags: ShowbagItem[] }) => {
               </div>
             </nav>
           </Route>
-
           <Route path="/list">
             <List
               items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
@@ -94,7 +93,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
               setUserName={setUserName}
             />
           </Route>
-          <Route paths={['/', '/search', '/:bagSlug']}>
+          <Route notPaths={['/list']}>
             <Catalog items={showbags} onToggleInList={toggleInList} listItems={listItems} />
           </Route>
           <Route path="/:bagSlug">
