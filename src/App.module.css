@@ -12,6 +12,15 @@
     background-color: var(--fallback-b1,oklch(var(--b1)/1)); 
 }
 
+.titleContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
 @media (max-width: 620px) {
     .header {
         display: grid;
