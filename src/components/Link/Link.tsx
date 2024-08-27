@@ -7,7 +7,11 @@ import type { LinkProps } from 'wouter';
  * To bail out of scrolling to top, simply pass an empty `onClick` prop
  */
 const Link = (props: LinkProps) => (
-  <WouterLink onClick={() => window.scroll(0, 0)} {...props} state={{ internalLink: true }} />
+  <WouterLink
+    onClick={() => window.scroll(0, 0)}
+    {...props}
+    state={{ internalLink: true, ...(props.state as object) }}
+  />
 );
 
 export default Link;
