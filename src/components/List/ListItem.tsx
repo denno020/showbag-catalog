@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import { Badge } from 'react-daisyui';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './ListItem.module.css';
 
@@ -9,7 +10,7 @@ type ListItemProps = {
 
 const ListItem = (props: ListItemProps) => {
   const { item, onRemove } = props;
-  const { image, title, showbag_price, slug } = item;
+  const { image, title, showbag_price, slug, showbag_stalls } = item;
 
   return (
     <div className={classes.listItem}>
@@ -26,6 +27,13 @@ const ListItem = (props: ListItemProps) => {
             </Link>
           </p>
           <p>${showbag_price}</p>
+          <div>
+            {showbag_stalls.map((stall) => (
+              <Badge key={stall.id} color="neutral">
+                {stall.title}
+              </Badge>
+            ))}
+          </div>
         </div>
         <button
           onClick={() => {
