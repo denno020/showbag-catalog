@@ -1,4 +1,10 @@
+import { postEvent } from '../../utils/analytics';
+
 const Footer = () => {
+  const handleClickDonationLink = () => {
+    postEvent('donation-link-clicked');
+  };
+
   return (
     <footer className="container mx-auto py-8 border-t border-gray-400 mt-6">
       <div className="container flex px-3 py-8 ">
@@ -13,6 +19,7 @@ const Footer = () => {
                   className="underline inline-flex items-center link link-primary"
                   href="https://donate.cerebralpalsy.org.au/"
                   target="_blank"
+                  onClick={handleClickDonationLink}
                 >
                   Cerebal Palsy Alliance{' '}
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useSearch, Switch } from 'wouter';
+import { useEffect, useState } from 'react';
+import { useSearch } from 'wouter';
 import Route from './components/Route';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
@@ -12,10 +12,11 @@ import List from './components/List';
 import ProductProvider from './components/Product/ProductProvider';
 import { useShowbags } from './hooks/useShowbags.ts';
 import { pageSize } from './constants';
-import classes from './App.module.css';
 import Search from './components/Search';
 import { useList } from './hooks/useList.ts';
 import Footer from './components/Footer';
+import { postEvent } from './utils/analytics.ts';
+import classes from './App.module.css';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags, totalCount } = useShowbags(props);
@@ -30,6 +31,22 @@ const App = (props: { showbags: ShowbagItem[] }) => {
     const name = search.get('name') || 'My';
     return name;
   });
+
+  useEffect(() => {
+    const userBreadcrumb = localStorage.getItem('showbags-user-breafdcrumb');
+
+    if (location.search !== '') {
+      postEvent('viewing-shared-url');
+    }
+
+    if (userBreadcrumb) {
+      postEvent('returning-user');
+      return;
+    }
+
+    localStorage.setItem('showbags-user-breadcrumb', '1');
+    postEvent('new-user');
+  }, []);
 
   return (
     <>
