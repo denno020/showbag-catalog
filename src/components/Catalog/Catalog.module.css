@@ -1,6 +1,6 @@
 .catalog {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     width: 100%;
 }
