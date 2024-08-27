@@ -8,26 +8,31 @@ import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './List.module.css';
 import { updateQueryStringWithList } from '../../utils/updateQueryStringWithArray.ts';
+import { useStore } from '../../store/useStore.ts';
 
 type ListProps = {
   items: ShowbagItem[];
   onRemove: (slug: ShowbagItem['slug']) => void;
-  userName: string;
+  userName?: string;
   setUserName: (name: string) => void;
 };
 
 const List = (props: ListProps) => {
-  const { items, onRemove, userName, setUserName } = props;
+  const { items, onRemove } = props;
   const { copyTextToClipboard } = useClipboard();
   const [isEditingName, setIsEditingName] = useState(false);
+  const userName = useStore((state) => state.name);
+  const setUserName = useStore((state) => state.setName);
+
   const [name, setName] = useState(userName);
 
   const handlePrepareShareURL = async () => {
-    if (userName === 'My') {
+    if (!userName) {
       toast.success('Please set your name first');
       setIsEditingName(true);
       return;
     }
+
     updateQueryStringWithList(userName, items);
 
     if (navigator.canShare && navigator.canShare()) {
@@ -54,12 +59,13 @@ const List = (props: ListProps) => {
   const saveName = () => {
     setIsEditingName(false);
     setUserName(name);
+
     localStorage.setItem('showbag-user-name', name);
   };
 
   const cancelChangeName = () => {
     setIsEditingName(false);
-    setUserName(userName);
+    // setUserName(userName);
   };
 
   return (
@@ -70,7 +76,7 @@ const List = (props: ListProps) => {
             <div className="w-full text-center">
               {!isEditingName && (
                 <button onClick={handleChangeName} className="btn btn-xs btn-outline">
-                  {userName === 'My' ? 'Set' : 'Change'}&nbsp;Your Name
+                  {!userName ? 'Set' : 'Change'}&nbsp;Your Name
                 </button>
               )}
               {isEditingName && (
@@ -93,9 +99,7 @@ const List = (props: ListProps) => {
                 </form>
               )}
             </div>
-            <h2 className="text-xl font-semibold text-center">
-              {userName === 'My' ? 'My' : `${userName}'s`} Show Bags List
-            </h2>
+            <h2 className="text-xl font-semibold text-center">{!userName ? 'My' : `${userName}'s`} Show Bags List</h2>
           </div>
         </header>
       )}

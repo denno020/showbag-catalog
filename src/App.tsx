@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { useSearch } from 'wouter';
+import { useEffect } from 'react';
 import Route from './components/Route';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
@@ -20,17 +19,9 @@ import classes from './App.module.css';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags, totalCount } = useShowbags(props);
-  const searchParam = useSearch();
   const toggleInList = useStore((state) => state.toggleInList);
 
   const [listItems] = useList();
-
-  const [userName, setUserName] = useState(() => {
-    // localStorage.getItem('showbag-user-name') || 'My'
-    const search = new URLSearchParams(searchParam);
-    const name = search.get('name') || 'My';
-    return name;
-  });
 
   useEffect(() => {
     const userBreadcrumb = localStorage.getItem('showbags-user-breadcrumb');
@@ -89,8 +80,6 @@ const App = (props: { showbags: ShowbagItem[] }) => {
             <List
               items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
               onRemove={toggleInList}
-              userName={userName}
-              setUserName={setUserName}
             />
           </Route>
           <Route notPaths={['/list']}>

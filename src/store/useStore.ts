@@ -5,6 +5,7 @@ import { useSearch } from 'wouter';
 
 export type StoreType = {
   name: string;
+  setName: (userName: string) => void;
   listItems: ShowbagItem['slug'][];
   setListItems: (list: ShowbagItem['slug'][]) => void;
   toggleInList: (bagSlug: ShowbagItem['slug']) => void;
@@ -21,7 +22,11 @@ const storeName = (() => {
 export const useStore = create<StoreType>()(
   persist(
     (set) => ({
-      name: 'My',
+      name: '',
+      setName: (userName) =>
+        set(() => ({
+          name: userName
+        })),
       listItems: [],
       setListItems: () => set((state) => ({ listItems: state.listItems })),
       toggleInList: (bagSlug: ShowbagItem['slug']) =>
@@ -47,11 +52,17 @@ export const useStore = create<StoreType>()(
 (() => {
   const search = new URLSearchParams(location.search);
   const itemsQueryParam = search.get('items')?.split(',') || [];
+  const name = search.get('name');
   // Search param takes precendence
   if (itemsQueryParam.length > 0) {
     useStore.setState({
       listItems: itemsQueryParam
     });
-    return;
+  }
+
+  if (name) {
+    useStore.setState({
+      name
+    });
   }
 })();
