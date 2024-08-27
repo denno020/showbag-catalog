@@ -3,10 +3,17 @@ import type { RouteProps as WouteProps } from 'wouter';
 
 type RouteProps = WouteProps & {
   paths?: string[];
+  notPaths?: string[];
 };
 
 const Route = (props: RouteProps) => {
   const [location] = useLocation();
+
+  if (props.notPaths) {
+    if (props.notPaths.some((path) => location === path)) {
+      return null;
+    }
+  }
 
   if (!props.paths) {
     return <Woute {...props} />;
