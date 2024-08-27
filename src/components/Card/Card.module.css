@@ -1,3 +1,19 @@
 .card {
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.price {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-color: oklch(var(--a));
+    border-radius: 50%;
+    font-size: 30px;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
