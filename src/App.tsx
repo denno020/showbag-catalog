@@ -33,7 +33,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
   });
 
   useEffect(() => {
-    const userBreadcrumb = localStorage.getItem('showbags-user-breafdcrumb');
+    const userBreadcrumb = localStorage.getItem('showbags-user-breadcrumb');
 
     if (location.search !== '') {
       postEvent('viewing-shared-url');
