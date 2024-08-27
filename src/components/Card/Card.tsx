@@ -24,7 +24,7 @@ const Card = (props: CardProps) => {
         }}
       >
         <div className="w-full relative">
-          <img alt="Bag preview" className="w-full aspect-square" src={image.permalink} />
+          <img alt="Bag preview" className="w-full aspect-square" src={image.permalink} loading="lazy" />
           <div className={classes.price}>${showbag_price}</div>
         </div>
         <div className="flex items-center justify-between">
