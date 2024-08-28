@@ -1,6 +1,7 @@
 import { useSearch } from 'wouter';
 import type { ShowbagItem } from '../showbags';
 import { useStore } from '../store/useStore';
+import { useSort } from './useSort';
 
 type UseShowbags = {
   showbags: ShowbagItem[];
@@ -17,7 +18,9 @@ export const useShowbags = (props: UseShowbags) => {
 
   const startIndex = (Number(page) - 1) * pageSize;
 
-  const searchedShowbags = showbags.filter((bag) => bag.title.toLowerCase().includes(search.toLowerCase()));
+  const sortedShowbags = useSort({ showbags });
+
+  const searchedShowbags = sortedShowbags.filter((bag) => bag.title.toLowerCase().includes(search.toLowerCase()));
 
   return {
     showbags: searchedShowbags.slice(startIndex, startIndex + pageSize),
