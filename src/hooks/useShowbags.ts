@@ -1,6 +1,6 @@
 import { useSearch } from 'wouter';
 import type { ShowbagItem } from '../showbags';
-import { pageSize } from '../constants';
+import { useStore } from '../store/useStore';
 
 type UseShowbags = {
   showbags: ShowbagItem[];
@@ -8,6 +8,7 @@ type UseShowbags = {
 
 export const useShowbags = (props: UseShowbags) => {
   const { showbags } = props;
+  const pageSize = useStore((state) => state.pageSize);
 
   const searchString = useSearch();
   const searchParams = new URLSearchParams(searchString);

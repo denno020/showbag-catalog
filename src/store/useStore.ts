@@ -9,6 +9,8 @@ export type StoreType = {
   listItems: ShowbagItem['slug'][];
   setListItems: (list: ShowbagItem['slug'][]) => void;
   toggleInList: (bagSlug: ShowbagItem['slug']) => void;
+  pageSize: number;
+  setPageSize: (pageSize: number) => void;
 };
 
 // The name search query param is going to become the way that we can make the
@@ -40,7 +42,9 @@ export const useStore = create<StoreType>()(
           return {
             listItems: [...state.listItems, bagSlug]
           };
-        })
+        }),
+      pageSize: 24,
+      setPageSize: (pageSize) => set(() => ({ pageSize }))
     }),
     {
       name: storeName,

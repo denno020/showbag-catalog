@@ -10,7 +10,6 @@ import Pagination from './components/Pagination';
 import List from './components/List';
 import ProductProvider from './components/Product/ProductProvider';
 import { useShowbags } from './hooks/useShowbags.ts';
-import { pageSize } from './constants';
 import Search from './components/Search';
 import { useList } from './hooks/useList.ts';
 import Footer from './components/Footer';
@@ -20,6 +19,7 @@ import classes from './App.module.css';
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags, totalCount } = useShowbags(props);
   const toggleInList = useStore((state) => state.toggleInList);
+  const pageSize = useStore((state) => state.pageSize);
 
   const [listItems] = useList();
 
