@@ -11,6 +11,8 @@ export type StoreType = {
   toggleInList: (bagSlug: ShowbagItem['slug']) => void;
   pageSize: number;
   setPageSize: (pageSize: number) => void;
+  sortOption: string;
+  setSortOption: (direction: string) => void;
 };
 
 // The name search query param is going to become the way that we can make the
@@ -44,7 +46,12 @@ export const useStore = create<StoreType>()(
           };
         }),
       pageSize: 24,
-      setPageSize: (pageSize) => set(() => ({ pageSize }))
+      setPageSize: (pageSize) => set(() => ({ pageSize })),
+      sortOption: '',
+      setSortOption: (sortOption) =>
+        set(() => ({
+          sortOption
+        }))
     }),
     {
       name: storeName,
