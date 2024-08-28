@@ -15,12 +15,12 @@ export const SortDirections = {
 const SortDirectionLabels = {
   [SortDirections.aZ]: 'A-Z',
   [SortDirections.zA]: 'Z-A',
-  [SortDirections.price_asc]: 'Lowest Price',
-  [SortDirections.price_desc]: 'Highest Price',
+  [SortDirections.price_asc]: 'Low Price',
+  [SortDirections.price_desc]: 'High Price',
   [SortDirections.value_asc]: 'Most Value',
   [SortDirections.value_desc]: 'Least Value',
-  [SortDirections.value_diff_asc]: 'Lowest Value Difference',
-  [SortDirections.value_diff_desc]: 'Highest Value Difference'
+  [SortDirections.value_diff_asc]: 'Least Value Diff',
+  [SortDirections.value_diff_desc]: 'Most Value Diff'
 };
 
 const Sort = () => {
@@ -30,7 +30,12 @@ const Sort = () => {
   return (
     <div className="flex gap-2 items-center">
       Sort:
-      <Select defaultValue={sortOption} size="sm" onChange={(e) => setSortOption(e.target.value)}>
+      <Select
+        defaultValue={sortOption}
+        size="sm"
+        onChange={(e) => setSortOption(e.target.value)}
+        className="text-center"
+      >
         {Object.entries(SortDirectionLabels).map(([value, label]) => (
           <Select.Option key={value} value={value}>
             {label}
