@@ -6,11 +6,10 @@ import classes from './Catalog.module.css';
 
 type CatalogProps = {
   items: ShowbagItem[];
-  listItems: ShowbagItem['slug'][];
 };
 
 const Catalog = (props: CatalogProps) => {
-  const { items, listItems } = props;
+  const { items } = props;
 
   return (
     <div className={classes.catalog}>

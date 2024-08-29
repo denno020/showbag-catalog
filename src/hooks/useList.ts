@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useSearch } from 'wouter';
 import toast from 'react-hot-toast';
 import { useStore } from '../store/useStore';

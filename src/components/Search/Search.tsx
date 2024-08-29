@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Tooltip, Input } from 'react-daisyui';
-import { useSearch, useLocation } from 'wouter';
+import { useSearch } from 'wouter';
 import { setQueryParam } from '../../utils/setQueryParam';
 
 const Search = () => {

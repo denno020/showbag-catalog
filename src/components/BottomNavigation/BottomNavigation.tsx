@@ -1,7 +1,6 @@
 import { BottomNavigation as BottomNavigationDaisyUI } from 'react-daisyui';
 import { useLocation } from 'wouter';
 import { useStore } from '../../store/useStore';
-import classes from './BottomNavigation.module.css';
 
 const BottomNavigation = () => {
   const [location, setLocation] = useLocation();

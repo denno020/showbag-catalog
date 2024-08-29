@@ -8,12 +8,10 @@ import { Badge } from 'react-daisyui';
 
 type ProductProps = {
   item: ShowbagItem;
-  isInList: boolean;
-  onToggleInList: (slug: ShowbagItem['slug']) => void;
 };
 
 const Product = (props: ProductProps) => {
-  const { item, onToggleInList: onToggleInList, isInList } = props;
+  const { item } = props;
 
   const { ref, close } = useClose({ useClickOutside: false });
 

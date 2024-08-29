@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import toast from 'react-hot-toast';
 import { Input } from 'react-daisyui';
 import ListItem from './ListItem.tsx';
-import { useClose } from '../../hooks/useClose.ts';
 import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './List.module.css';

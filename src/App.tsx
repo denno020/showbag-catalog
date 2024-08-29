@@ -79,7 +79,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
             />
           </Route>
           <Route notPaths={['/list']}>
-            <Catalog items={showbags} listItems={listItems} />
+            <Catalog items={showbags} />
           </Route>
           <Route path="/:bagSlug">
             {(params) => <ProductProvider items={props.showbags} bagSlug={(params as { bagSlug: string }).bagSlug} />}

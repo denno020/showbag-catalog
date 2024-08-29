@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react';
 import { useOutsideClick } from '@chakra-ui/react-use-outside-click';
-import { useLocation, useSearch } from 'wouter';
+import { useLocation } from 'wouter';
 import { useEscapeKey } from './useEscapeKey';
 
 type UseCloseProps = {
@@ -24,7 +24,6 @@ type UseCloseProps = {
 export const useClose = (props?: UseCloseProps) => {
   const { fallbackCloseTo = '/', useClickOutside = true, useEscapeButton = true } = props || {};
   const ref = useRef(null);
-  const searchParam = useSearch();
   const [, setLocation] = useLocation();
 
   const close = useCallback(() => {

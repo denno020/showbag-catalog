@@ -1,5 +1,4 @@
 import classnames from 'classnames';
-import type { ShowbagItem } from '../../showbags';
 import { useStore } from '../../store/useStore';
 
 export type ActionToListProps = {

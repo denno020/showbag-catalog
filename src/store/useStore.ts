@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import type { ShowbagItem } from '../showbags';
-import { useSearch } from 'wouter';
 
 export type StoreType = {
   name: string;
