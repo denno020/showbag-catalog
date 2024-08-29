@@ -4,6 +4,7 @@ import ActionToList from '../ActionToList';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Product.module.css';
 import ListItem from './ListItem';
+import { Badge } from 'react-daisyui';
 
 type ProductProps = {
   item: ShowbagItem;
@@ -53,11 +54,13 @@ const Product = (props: ProductProps) => {
           </div>
           <div>
             <p className="font-bold">Where to find</p>
-            <ul>
+            <div>
               {item.showbag_stalls.map((stall) => (
-                <li key={stall.id}>{stall.title}</li>
+                <Badge key={stall.id} color="neutral">
+                  {stall.title}
+                </Badge>
               ))}
-            </ul>
+            </div>
           </div>
           <div>
             <ActionToList slug={item.slug} />
