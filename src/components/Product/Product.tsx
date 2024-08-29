@@ -1,6 +1,6 @@
 import classnames from 'classnames';
-import FocusTrap from 'focus-trap-react';
 import { useClose } from '../../hooks/useClose.ts';
+import ActionToList from '../ActionToList';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Product.module.css';
 import ListItem from './ListItem';
@@ -60,12 +60,7 @@ const Product = (props: ProductProps) => {
             </ul>
           </div>
           <div>
-            <button
-              onClick={() => onToggleInList(item.slug)}
-              className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-            >
-              {isInList ? 'Remove from' : 'Add to'}&nbsp; List
-            </button>
+            <ActionToList slug={item.slug} />
           </div>
         </div>
       </div>
