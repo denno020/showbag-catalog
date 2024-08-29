@@ -6,12 +6,11 @@ import classes from './Catalog.module.css';
 
 type CatalogProps = {
   items: ShowbagItem[];
-  onToggleInList: (itemSlug: ShowbagItem['slug']) => void;
   listItems: ShowbagItem['slug'][];
 };
 
 const Catalog = (props: CatalogProps) => {
-  const { items, onToggleInList, listItems } = props;
+  const { items, listItems } = props;
 
   return (
     <div className={classes.catalog}>
@@ -20,7 +19,7 @@ const Catalog = (props: CatalogProps) => {
       </div>
       <div className={classes.items}>
         {items.map((item) => (
-          <Card key={item.id} item={item} onToggleInList={onToggleInList} isInList={listItems.includes(item.slug)} />
+          <Card key={item.id} item={item} />
         ))}
       </div>
       <div className="w-full container mx-auto px-6 py-3 flex justify-end">

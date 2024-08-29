@@ -13,6 +13,7 @@ export type StoreType = {
   setPageSize: (pageSize: number) => void;
   sortOption: string;
   setSortOption: (direction: string) => void;
+  getIsInList: (slug: string) => boolean;
 };
 
 // The name search query param is going to become the way that we can make the
@@ -25,7 +26,7 @@ const storeName = (() => {
 
 export const useStore = create<StoreType>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       name: '',
       setName: (userName) =>
         set(() => ({
@@ -51,7 +52,8 @@ export const useStore = create<StoreType>()(
       setSortOption: (sortOption) =>
         set(() => ({
           sortOption
-        }))
+        })),
+      getIsInList: (bagSlug) => get().listItems.includes(bagSlug)
     }),
     {
       name: storeName,
