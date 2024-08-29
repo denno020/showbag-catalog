@@ -47,11 +47,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
           <Link to="/" className={classes.logoLink}>
             <img src="/show_logo.svg" alt="" className={classes.image} />
           </Link>
-          <p className="text-xl">
-            Better
-            <br /> Showbag
-            <br /> Selector
-          </p>
+          <p className={classes.title}>Better Showbag Selector</p>
         </div>
         <div className={classes.date}>August 31st - September 8th</div>
       </header>
