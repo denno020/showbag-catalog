@@ -99,7 +99,9 @@ const List = (props: ListProps) => {
                 </form>
               )}
             </div>
-            <h2 className="text-xl font-semibold text-center">{!userName ? 'My' : `${userName}'s`} Show Bags List</h2>
+            <h2 className="text-xl font-semibold text-center py-4">
+              {!userName ? 'My' : `${userName}'s`} Show Bags List
+            </h2>
           </div>
         </header>
       )}
