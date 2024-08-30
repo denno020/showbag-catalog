@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Badge } from 'react-daisyui';
+import { Badge, Button } from 'react-daisyui';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './ListItem.module.css';
 
@@ -19,32 +19,39 @@ const ListItem = (props: ListItemProps) => {
           <img src={image.permalink} alt="Showbag preview" className="w-28 aspect-auto" />
         </Link>
       </div>
-      <div className="flex items-center justify-between w-full">
+      <div className="flex flex-col w-full">
         <div>
           <p className="text-2xl">
             <Link to={slug} state={{ internalLink: true }}>
               {title}
             </Link>
           </p>
-          <p>${showbag_price}</p>
+        </div>
+        <div className="flex items-center justify-between">
           <div>
-            {showbag_stalls.map((stall) => (
-              <Badge key={stall.id} color="neutral">
-                {stall.title}
-              </Badge>
-            ))}
+            <p>${showbag_price}</p>
+            <div>
+              {showbag_stalls.map((stall) => (
+                <Badge key={stall.id} color="neutral">
+                  {stall.title}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className="flex gap-2 justify-end">
+            <Button
+              onClick={() => {
+                onRemove(slug);
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z" />
+                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z" />
+              </svg>
+              <span className="sr-only">Remove</span>
+            </Button>
           </div>
         </div>
-        <button
-          onClick={() => {
-            onRemove(slug);
-          }}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-            <path d="M280-120q-33 0-56.5-23.5T200-200v-520q-17 0-28.5-11.5T160-760q0-17 11.5-28.5T200-800h160q0-17 11.5-28.5T400-840h160q17 0 28.5 11.5T600-800h160q17 0 28.5 11.5T800-760q0 17-11.5 28.5T760-720v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM400-280q17 0 28.5-11.5T440-320v-280q0-17-11.5-28.5T400-640q-17 0-28.5 11.5T360-600v280q0 17 11.5 28.5T400-280Zm160 0q17 0 28.5-11.5T600-320v-280q0-17-11.5-28.5T560-640q-17 0-28.5 11.5T520-600v280q0 17 11.5 28.5T560-280ZM280-720v520-520Z" />
-          </svg>
-          <span className="sr-only">Remove</span>
-        </button>
       </div>
     </div>
   );
