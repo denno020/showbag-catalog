@@ -13,6 +13,11 @@ export type StoreType = {
   sortOption: string;
   setSortOption: (direction: string) => void;
   getIsInList: (slug: string) => boolean;
+  setListOption: (option: string, value: boolean) => void;
+  listOptions: {
+    groupByStalls: boolean;
+    hideCollected: boolean;
+  };
 };
 
 // The name search query param is going to become the way that we can make the
@@ -52,7 +57,19 @@ export const useStore = create<StoreType>()(
         set(() => ({
           sortOption
         })),
-      getIsInList: (bagSlug) => get().listItems.includes(bagSlug)
+      getIsInList: (bagSlug) => get().listItems.includes(bagSlug),
+      setListOption: (option, value) =>
+        set((state) => ({
+          ...state,
+          listOptions: {
+            ...state.listOptions,
+            [option]: value
+          }
+        })),
+      listOptions: {
+        groupByStalls: false,
+        hideCollected: true
+      }
     }),
     {
       name: storeName,

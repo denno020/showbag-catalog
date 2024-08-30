@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import classnames from 'classnames';
 import toast from 'react-hot-toast';
-import { Input } from 'react-daisyui';
+import { Button, Input } from 'react-daisyui';
 import ListItem from './ListItem.tsx';
 import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './List.module.css';
 import { updateQueryStringWithList } from '../../utils/updateQueryStringWithArray.ts';
 import { useStore } from '../../store/useStore.ts';
+import OptionsDrawer from './OptionsDrawer.tsx';
 
 type ListProps = {
   items: ShowbagItem[];
@@ -102,8 +103,8 @@ const List = (props: ListProps) => {
       )}
       <div className="px-6">
         {items.length > 0 && (
-          <div className="flex justify-center">
-            <button onClick={handlePrepareShareURL} className={classnames('btn btn-sm btn-primary', classes.shareBtn)}>
+          <div className="flex gap-1 justify-between">
+            <Button size="sm" color="primary" onClick={handlePrepareShareURL} className={classnames(classes.shareBtn)}>
               <span>Share List</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +115,10 @@ const List = (props: ListProps) => {
               >
                 <path d="M720-80q-50 0-85-35t-35-85q0-7 1-14.5t3-13.5L322-392q-17 15-38 23.5t-44 8.5q-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 44 8.5t38 23.5l282-164q-2-6-3-13.5t-1-14.5q0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-44-8.5T638-672L356-508q2 6 3 13.5t1 14.5q0 7-1 14.5t-3 13.5l282 164q17-15 38-23.5t44-8.5q50 0 85 35t35 85q0 50-35 85t-85 35Zm0-640q17 0 28.5-11.5T760-760q0-17-11.5-28.5T720-800q-17 0-28.5 11.5T680-760q0 17 11.5 28.5T720-720ZM240-440q17 0 28.5-11.5T280-480q0-17-11.5-28.5T240-520q-17 0-28.5 11.5T200-480q0 17 11.5 28.5T240-440Zm480 280q17 0 28.5-11.5T760-200q0-17-11.5-28.5T720-240q-17 0-28.5 11.5T680-200q0 17 11.5 28.5T720-160Zm0-600ZM240-480Zm480 280Z" />
               </svg>
-            </button>
+            </Button>
+            <div>
+              <OptionsDrawer />
+            </div>
           </div>
         )}
         <div className={classnames('my-4', classes.listItems)}>
