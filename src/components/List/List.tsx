@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import toast from 'react-hot-toast';
 import { Button, Input } from 'react-daisyui';
 import ListItem from './ListItem.tsx';
+import ListByStands from './ListByStands.tsx';
 import { useClipboard } from '../../hooks/useClipboard.js';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './List.module.css';
@@ -10,7 +11,7 @@ import { updateQueryStringWithList } from '../../utils/updateQueryStringWithArra
 import { useStore } from '../../store/useStore.ts';
 import OptionsDrawer from './OptionsDrawer.tsx';
 
-type ListProps = {
+export type ListProps = {
   items: ShowbagItem[];
   onRemove: (slug: ShowbagItem['slug']) => void;
 };
@@ -21,6 +22,7 @@ const List = (props: ListProps) => {
   const [isEditingName, setIsEditingName] = useState(false);
   const userName = useStore((state) => state.name);
   const setUserName = useStore((state) => state.setName);
+  const groupByStalls = useStore((state) => state.listOptions.groupByStalls);
 
   const [name, setName] = useState(userName);
 
@@ -123,9 +125,10 @@ const List = (props: ListProps) => {
         )}
         <div className={classnames('my-4', classes.listItems)}>
           {items.length === 0 && <p className="py-5">Nothing added to your list!</p>}
-          {items.map((item) => (
-            <ListItem key={item.slug} item={item} onRemove={onRemove} />
-          ))}
+
+          {groupByStalls && <ListByStands items={items} onRemove={onRemove} />}
+
+          {!groupByStalls && items.map((item) => <ListItem key={item.slug} item={item} onRemove={onRemove} />)}
         </div>
       </div>
       {items.length > 0 && (

@@ -13,7 +13,7 @@ const OptionsDrawer = () => {
       open={visible}
       end={true}
       onClickOverlay={() => setVisible(false)}
-      sideClassName="top-[129px]"
+      sideClassName="top-[129px] z-10"
       side={
         <div className="relative p-4 w-80 h-full bg-base-200 text-base-content z-2">
           <Button color="ghost" onClick={() => setVisible(false)} className="absolute top-1 right-1">
