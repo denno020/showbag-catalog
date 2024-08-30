@@ -73,10 +73,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
             </nav>
           </Route>
           <Route path="/list">
-            <List
-              items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))}
-              onRemove={toggleInList}
-            />
+            <List items={props.showbags.filter((listItem) => listItems.includes(listItem.slug))} />
           </Route>
           <Route notPaths={['/list']}>
             <Catalog items={showbags} />

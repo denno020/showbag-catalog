@@ -2,14 +2,15 @@ import { Link } from 'wouter';
 import { Badge, Button } from 'react-daisyui';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './ListItem.module.css';
+import { useStore } from '../../store/useStore.ts';
 
 type ListItemProps = {
   item: ShowbagItem;
-  onRemove: (slug: ShowbagItem['slug']) => void;
 };
 
 const ListItem = (props: ListItemProps) => {
-  const { item, onRemove } = props;
+  const { item } = props;
+  const toggleInList = useStore((state) => state.toggleInList);
   const { image, title, showbag_price, slug, showbag_stalls } = item;
 
   return (
@@ -41,7 +42,7 @@ const ListItem = (props: ListItemProps) => {
           <div className="flex gap-2 justify-end">
             <Button
               onClick={() => {
-                onRemove(slug);
+                toggleInList(slug);
               }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">

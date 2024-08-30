@@ -13,11 +13,10 @@ import OptionsDrawer from './OptionsDrawer.tsx';
 
 export type ListProps = {
   items: ShowbagItem[];
-  onRemove: (slug: ShowbagItem['slug']) => void;
 };
 
 const List = (props: ListProps) => {
-  const { items, onRemove } = props;
+  const { items } = props;
   const { copyTextToClipboard } = useClipboard();
   const [isEditingName, setIsEditingName] = useState(false);
   const userName = useStore((state) => state.name);
@@ -128,9 +127,9 @@ const List = (props: ListProps) => {
         <div className={classnames('my-4', classes.listItems)}>
           {items.length === 0 && <p className="py-5">Nothing added to your list!</p>}
 
-          {groupByStalls && <ListByStands items={items} onRemove={onRemove} />}
+          {groupByStalls && <ListByStands items={items} />}
 
-          {!groupByStalls && items.map((item) => <ListItem key={item.slug} item={item} onRemove={onRemove} />)}
+          {!groupByStalls && items.map((item) => <ListItem key={item.slug} item={item} />)}
         </div>
       </div>
       {items.length > 0 && (

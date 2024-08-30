@@ -31,7 +31,7 @@ function groupShowbagsByStands(items: ShowbagItem[]) {
 }
 
 const ListByStands = (props: ListProps) => {
-  const { items, onRemove } = props;
+  const { items } = props;
 
   const stalls = groupShowbagsByStands(items);
 
@@ -44,7 +44,7 @@ const ListByStands = (props: ListProps) => {
           <Collapse.Title className="text-xl font-medium">{stallName}</Collapse.Title>
           <Collapse.Content className="p-0">
             {items.map((item) => (
-              <ListItem key={item.slug} item={item} onRemove={onRemove} />
+              <ListItem key={item.slug} item={item} />
             ))}
           </Collapse.Content>
         </Collapse>
