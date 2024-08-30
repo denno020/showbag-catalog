@@ -22,7 +22,7 @@ const List = (props: ListProps) => {
   const [isEditingName, setIsEditingName] = useState(false);
   const userName = useStore((state) => state.name);
   const setUserName = useStore((state) => state.setName);
-  const groupByStalls = useStore((state) => state.listOptions.groupByStalls);
+  const groupByStalls = useStore((state) => state.listOptions.groupByStands);
 
   const [name, setName] = useState(userName);
 

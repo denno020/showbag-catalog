@@ -4,7 +4,7 @@ import { useStore } from '../../store/useStore';
 
 const OptionsDrawer = () => {
   const [visible, setVisible] = useState(false);
-  const groupByStalls = useStore((state) => state.listOptions.groupByStalls);
+  const groupByStands = useStore((state) => state.listOptions.groupByStands);
   const hideCollected = useStore((state) => state.listOptions.hideCollected);
   const setOption = useStore((state) => state.setListOption);
 
@@ -30,20 +30,20 @@ const OptionsDrawer = () => {
           <div>
             <div className="py-3">
               <div className="flex justify-between items-center">
-                <label htmlFor="group-by-stalls" className="w-full">
-                  Group By Stalls
+                <label htmlFor="group-by-stands" className="w-full">
+                  Group By Stands
                 </label>
                 <Toggle
                   size="sm"
-                  id="group-by-stalls"
-                  checked={groupByStalls}
-                  onChange={() => setOption('groupByStalls', !groupByStalls)}
+                  id="group-by-stands"
+                  checked={groupByStands}
+                  onChange={() => setOption('groupByStands', !groupByStands)}
                 />
               </div>
               <small>
                 <em>
                   When enabled, showbags might appear multiple times in your list, if they're available at multiple
-                  stalls.
+                  stands.
                 </em>
               </small>
             </div>

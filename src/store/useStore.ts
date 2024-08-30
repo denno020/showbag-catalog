@@ -15,7 +15,7 @@ export type StoreType = {
   getIsInList: (slug: string) => boolean;
   setListOption: (option: string, value: boolean) => void;
   listOptions: {
-    groupByStalls: boolean;
+    groupByStands: boolean;
     hideCollected: boolean;
   };
 };
@@ -67,7 +67,7 @@ export const useStore = create<StoreType>()(
           }
         })),
       listOptions: {
-        groupByStalls: false,
+        groupByStands: false,
         hideCollected: true
       }
     }),
