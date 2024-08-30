@@ -92,9 +92,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
           </div>
         </Route>
 
-        <Route path="/">
-          <Footer />
-        </Route>
+        <Footer />
 
         <BottomNavigation />
       </section>

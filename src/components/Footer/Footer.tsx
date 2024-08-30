@@ -6,8 +6,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="container mx-auto py-8 border-t border-gray-400 mt-6">
-      <div className="container flex px-3 py-8 ">
+    <footer className="container mx-auto py-3 mt-6">
+      <div className="container flex px-3 py-8">
         <div className="w-full mx-auto flex flex-wrap">
           <div className="flex w-full lg:w-1/2 ">
             <div className="px-3 md:px-0">
