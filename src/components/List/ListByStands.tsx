@@ -42,7 +42,7 @@ const ListByStands = (props: ListProps) => {
       {Object.entries(stalls).map(([stallName, items]) => (
         <Collapse key={stallName} icon="arrow" checkbox={true}>
           <Collapse.Title className="text-xl font-medium">{stallName}</Collapse.Title>
-          <Collapse.Content>
+          <Collapse.Content className="p-0">
             {items.map((item) => (
               <ListItem key={item.slug} item={item} onRemove={onRemove} />
             ))}
