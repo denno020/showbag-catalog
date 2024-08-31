@@ -3,16 +3,17 @@ import Route from './components/Route';
 import { Toaster } from 'react-hot-toast';
 import { type ShowbagItem } from './showbags.ts';
 import Link from './components/Link';
-import { useStore } from './store/useStore.ts';
 import BottomNavigation from './components/BottomNavigation';
 import Catalog from './components/Catalog';
 import Pagination from './components/Pagination';
 import List from './components/List';
 import ProductProvider from './components/Product/ProductProvider';
-import { useShowbags } from './hooks/useShowbags.ts';
 import Search from './components/Search';
-import { useList } from './hooks/useList.ts';
 import Footer from './components/Footer';
+import Logo from './components/Logo/Logo.tsx';
+import { useStore } from './store/useStore.ts';
+import { useShowbags } from './hooks/useShowbags.ts';
+import { useList } from './hooks/useList.ts';
 import { postEvent } from './utils/analytics.ts';
 import classes from './App.module.css';
 
@@ -47,7 +48,7 @@ const App = (props: { showbags: ShowbagItem[] }) => {
       <header className={classes.header}>
         <div className={classes.titleContainer}>
           <Link to="/" className={classes.logoLink}>
-            <img src="/show_logo.svg" alt="" className={classes.image} />
+            <Logo />
           </Link>
           <p className={classes.title}>Better Showbag Selector</p>
         </div>
