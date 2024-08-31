@@ -26,6 +26,8 @@ const App = (props: { showbags: ShowbagItem[] }) => {
   useEffect(() => {
     const userBreadcrumb = localStorage.getItem('showbags-user-breadcrumb');
 
+    postEvent(`referrer__${document.referrer || 'direct'}`);
+
     if (location.search !== '') {
       postEvent('viewing-shared-url');
     }
