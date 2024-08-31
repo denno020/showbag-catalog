@@ -5,6 +5,7 @@ import { Badge, Button } from 'react-daisyui';
 import type { ShowbagItem } from '../../showbags.ts';
 import classes from './ListItem.module.css';
 import { useStore } from '../../store/useStore.ts';
+import Price from '../Price/Price.tsx';
 
 type ListItemProps = {
   item: ShowbagItem;
@@ -63,7 +64,9 @@ const ListItem = (props: ListItemProps) => {
         </div>
         <div className="flex items-center justify-between">
           <div>
-            <p>${showbag_price}</p>
+            <p>
+              <Price value={showbag_price} />
+            </p>
             <div>
               {showbag_stalls.map((stall) => (
                 <Badge key={stall.id} color="neutral">

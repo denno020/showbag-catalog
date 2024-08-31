@@ -5,6 +5,7 @@ import type { ShowbagItem } from '../../showbags';
 import classes from './Product.module.css';
 import ListItem from './ListItem';
 import { Badge } from 'react-daisyui';
+import Price from '../Price/Price.tsx';
 
 type ProductProps = {
   item: ShowbagItem;
@@ -38,7 +39,9 @@ const Product = (props: ProductProps) => {
         </div>
         <div className="flex flex-col gap-4">
           <div className="text-2xl">{item.title}</div>
-          <div className="text-3xl">${item.showbag_price}</div>
+          <div className="text-3xl">
+            <Price value={item.showbag_price} />
+          </div>
           <div>
             <p className="font-bold">Inside the bag</p>
             <ul>
@@ -48,7 +51,9 @@ const Product = (props: ProductProps) => {
                 </li>
               ))}
             </ul>
-            <div>Valued at ${item.showbag_value}</div>
+            <div>
+              Valued at <Price value={item.showbag_value} />
+            </div>
           </div>
           <div>
             <p className="font-bold">Where to find</p>

@@ -2,6 +2,7 @@ import Link from '../Link';
 import type { ShowbagItem } from '../../showbags';
 import classes from './Card.module.css';
 import ActionToList from '../ActionToList';
+import Price from '../Price';
 
 export type CardProps = {
   item: ShowbagItem;
@@ -23,7 +24,9 @@ const Card = (props: CardProps) => {
       >
         <div className="w-full relative">
           <img alt="Bag preview" className="w-full aspect-square" src={image.permalink} loading="lazy" />
-          <div className={classes.price}>${showbag_price}</div>
+          <div className={classes.price}>
+            <Price value={showbag_price} />
+          </div>
         </div>
         <div className="flex items-center justify-between">
           <p className="text-xl text-center">{title}</p>
