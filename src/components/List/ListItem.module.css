@@ -2,4 +2,17 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    scale: 1;
+    opacity: 1;
+}
+
+.listItemRemoved {
+    transform: translateX(120%);
+    transition: transform 250ms ease-in-out;
+}
+
+.collectedAnimation {
+    opacity: 0;
+    scale: 0;
+    transition: opacity 250ms ease-in-out, scale 250ms ease-in-out;
 }
