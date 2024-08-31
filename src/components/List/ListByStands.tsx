@@ -35,8 +35,6 @@ const ListByStands = (props: ListProps) => {
 
   const stalls = groupShowbagsByStands(items);
 
-  console.log({ stalls });
-
   return (
     <div>
       {Object.entries(stalls).map(([stallName, items]) => (

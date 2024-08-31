@@ -48,7 +48,7 @@ const OptionsDrawer = () => {
               </small>
             </div>
 
-            {/* <div className="py-3">
+            <div className="py-3">
               <div className="flex justify-between items-center">
                 <label htmlFor="hide-collected" className="w-full">
                   Hide Collected Bags
@@ -63,7 +63,7 @@ const OptionsDrawer = () => {
               <small>
                 <em>Unhide if you need to see details of a bag that you've already collected</em>
               </small>
-            </div> */}
+            </div>
           </div>
         </div>
       }

@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
+import { postEvent } from '../utils/analytics';
 import type { ShowbagItem } from '../showbags';
 
 export type StoreType = {
@@ -13,6 +14,8 @@ export type StoreType = {
   sortOption: string;
   setSortOption: (direction: string) => void;
   getIsInList: (slug: string) => boolean;
+  collectedBags: ShowbagItem['slug'][];
+  toggleBagCollected: (bagSlug: ShowbagItem['slug']) => void;
   setListOption: (option: string, value: boolean) => void;
   listOptions: {
     groupByStands: boolean;
@@ -38,7 +41,7 @@ export const useStore = create<StoreType>()(
         })),
       listItems: [],
       setListItems: () => set((state) => ({ listItems: state.listItems })),
-      toggleInList: (bagSlug: ShowbagItem['slug']) =>
+      toggleInList: (bagSlug) =>
         set((state) => {
           if (state.listItems.includes(bagSlug)) {
             return {
@@ -58,6 +61,21 @@ export const useStore = create<StoreType>()(
           sortOption
         })),
       getIsInList: (bagSlug) => get().listItems.includes(bagSlug),
+      collectedBags: [],
+      toggleBagCollected: (bagSlug) =>
+        set((state) => {
+          if (state.collectedBags.includes(bagSlug)) {
+            postEvent('bag-uncollected');
+            return {
+              collectedBags: state.collectedBags.filter((prevItemSlug) => prevItemSlug !== bagSlug)
+            };
+          }
+
+          postEvent('bag-collected');
+          return {
+            collectedBags: [...state.collectedBags, bagSlug]
+          };
+        }),
       setListOption: (option, value) =>
         set((state) => ({
           ...state,

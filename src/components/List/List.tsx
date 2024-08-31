@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import classnames from 'classnames';
 import toast from 'react-hot-toast';
 import { Button, Input } from 'react-daisyui';
@@ -10,6 +10,7 @@ import classes from './List.module.css';
 import { updateQueryStringWithList } from '../../utils/updateQueryStringWithArray.ts';
 import { useStore } from '../../store/useStore.ts';
 import OptionsDrawer from './OptionsDrawer.tsx';
+import { useDisplayedListItems } from '../../hooks/useDisplayedListItems.ts';
 
 export type ListProps = {
   items: ShowbagItem[];
@@ -22,6 +23,9 @@ const List = (props: ListProps) => {
   const userName = useStore((state) => state.name);
   const setUserName = useStore((state) => state.setName);
   const groupByStalls = useStore((state) => state.listOptions.groupByStands);
+  const hideCollected = useStore((state) => state.listOptions.hideCollected);
+  const displayedItems = useDisplayedListItems({ items });
+  const setOption = useStore((state) => state.setListOption);
 
   const [name, setName] = useState(userName);
 
@@ -124,12 +128,44 @@ const List = (props: ListProps) => {
             </div>
           </div>
         )}
+        {items.length > 0 && !hideCollected && (
+          <div className="py-2 italic">
+            Collected bags shown. To hide,{' '}
+            <Button size="sm" color="ghost" className="p-0 underline" onClick={() => setOption('hideCollected', true)}>
+              click here
+            </Button>
+          </div>
+        )}
+        {items.length > 0 && displayedItems.length > 0 && hideCollected && (
+          <div className="py-2 italic">
+            Collected bags hidden. To show,{' '}
+            <Button size="sm" color="ghost" className="p-0 underline" onClick={() => setOption('hideCollected', false)}>
+              click here
+            </Button>
+          </div>
+        )}
         <div className={classnames('my-4', classes.listItems)}>
           {items.length === 0 && <p className="py-5">Nothing added to your list!</p>}
 
-          {groupByStalls && <ListByStands items={items} />}
+          {groupByStalls && displayedItems.length > 0 && <ListByStands items={displayedItems} />}
 
-          {!groupByStalls && items.map((item) => <ListItem key={item.slug} item={item} />)}
+          {!groupByStalls && displayedItems.map((item) => <ListItem key={item.slug} item={item} />)}
+
+          {items.length > 0 && displayedItems.length === 0 && (
+            <div className="py-5 text-center">
+              <p>All bags have been collected!</p>
+              <div>
+                <Button
+                  size="sm"
+                  color="ghost"
+                  className="p-0 underline"
+                  onClick={() => setOption('hideCollected', false)}
+                >
+                  Click here to view collected bags
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       {items.length > 0 && (
