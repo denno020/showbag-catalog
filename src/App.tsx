@@ -19,7 +19,6 @@ import classes from './App.module.css';
 
 const App = (props: { showbags: ShowbagItem[] }) => {
   const { showbags, totalCount } = useShowbags(props);
-  const toggleInList = useStore((state) => state.toggleInList);
   const pageSize = useStore((state) => state.pageSize);
 
   const [listItems] = useList();
