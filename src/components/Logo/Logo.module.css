@@ -1,14 +1,27 @@
 .wheel {
-    animation: rotate 8s linear infinite;
+    animation: rotate 10s linear infinite;
     transform-origin: 238px 40px;
 }
 
 @keyframes rotate {
-    from {
+    0% {
         transform: rotate(0deg);
-    }
-
-    to {
+        animation-timing-function: ease-in; /* Start slowly */
+      }
+      25% {
+        transform: rotate(90deg);
+        animation-timing-function: ease-out; /* Speed up */
+      }
+      50% {
+        transform: rotate(180deg);
+        animation-timing-function: ease-in; /* Slow down */
+      }
+      75% {
+        transform: rotate(270deg);
+        animation-timing-function: ease-out; /* Speed up */
+      }
+      100% {
         transform: rotate(360deg);
-    }
+        animation-timing-function: ease-in; /* Slow down to a stop */
+      }
 }
