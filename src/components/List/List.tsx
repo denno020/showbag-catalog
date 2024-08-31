@@ -10,6 +10,7 @@ import classes from './List.module.css';
 import { updateQueryStringWithList } from '../../utils/updateQueryStringWithArray.ts';
 import { useStore } from '../../store/useStore.ts';
 import OptionsDrawer from './OptionsDrawer.tsx';
+import ListTotals from './ListTotals.tsx';
 import { useDisplayedListItems } from '../../hooks/useDisplayedListItems.ts';
 
 export type ListProps = {
@@ -170,7 +171,7 @@ const List = (props: ListProps) => {
       </div>
       {items.length > 0 && (
         <footer className="container mx-auto px-6 py-3 border-t border-gray-400 font-bold text-lg text-center">
-          Total: ${items.reduce((total, item) => total + Number(item.showbag_price), 0)}
+          <ListTotals items={items} />
         </footer>
       )}
     </section>
